@@ -32,5 +32,4 @@ GitHub-style ship log for `clanker-site`.
 
 ## Notes
 
-- Repository: https://github.com/PabloDeLaCruz1/clanker-site
 - Deploys: auto-triggered from `main` via Vercel
