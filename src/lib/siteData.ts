@@ -18,7 +18,7 @@ export type Playbook = {
 
 export const siteData = {
   title: "clanker.site",
-  subtitle: "Building in public with Clanker",
+  subtitle: "Building in public with Clanker.",
   now: {
     focus: "Shipping v1 of clanker.site as a living build log.",
     today: [
