@@ -4,12 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  ["/", "⚡ Now"],
-  ["/build-log", "🧱 Build Log"],
-  ["/experiments", "🧪 Experiments"],
-  ["/use-cases", "🧩 Use Cases"],
-  ["/playbooks", "🧭 Playbooks"],
-  ["/roadmap", "🛰️ Roadmap"],
+  ["/", "⚡ Now", false],
+  ["/build-log", "🧱 Build Log", false],
+  ["/experiments", "🧪 Experiments", false],
+  ["/use-cases", "🧩 Use Cases", false],
+  ["/playbooks", "🧭 Playbooks", false],
+  ["/roadmap", "🛰️ Roadmap", false],
+  ["https://www.youtube.com/channel/UCk7Zu8JfJLEhn4_2EYT7tMg", "▶️ YouTube", true],
 ] as const;
 
 export function Nav() {
@@ -18,12 +19,14 @@ export function Nav() {
   return (
     <nav className="sticky top-4 z-40 mb-10 mt-8 rounded-2xl border border-orange-300/25 bg-[#0b0f14]/85 p-2 backdrop-blur-md">
       <div className="flex flex-wrap gap-2">
-        {links.map(([href, label]) => {
-          const active = pathname === href;
+        {links.map(([href, label, external]) => {
+          const active = !external && pathname === href;
           return (
             <Link
               key={href}
               href={href}
+              target={external ? "_blank" : undefined}
+              rel={external ? "noopener noreferrer" : undefined}
               className={`premium-link rounded-xl border px-3.5 py-2 text-sm ${
                 active
                   ? "border-orange-300/70 bg-orange-300/15 text-orange-50 shadow-[0_0_18px_rgba(244,106,42,0.18)]"
