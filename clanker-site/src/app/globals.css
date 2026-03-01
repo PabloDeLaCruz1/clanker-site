@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #06070b;
+  --foreground: #e6f7ff;
+  --muted: #9ab0bf;
+  --panel: rgba(13, 17, 28, 0.72);
+  --panel-border: rgba(87, 124, 158, 0.35);
+  --accent: #5ee7ff;
+  --accent-2: #8a7dff;
 }
 
 @theme inline {
@@ -12,15 +17,78 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
+  min-height: 100vh;
+  margin: 0;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Inter, system-ui, -apple-system, sans-serif;
+  background:
+    radial-gradient(900px 500px at 10% -10%, rgba(94, 231, 255, 0.12), transparent 55%),
+    radial-gradient(700px 420px at 85% -15%, rgba(138, 125, 255, 0.14), transparent 55%),
+    linear-gradient(180deg, #05060a 0%, #070a11 100%);
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(94, 231, 255, 0.25);
+  color: #effcff;
+}
+
+.panel {
+  border: 1px solid var(--panel-border);
+  background: var(--panel);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  box-shadow:
+    0 0 0 1px rgba(94, 231, 255, 0.05) inset,
+    0 24px 70px rgba(0, 0, 0, 0.45);
+}
+
+.kicker {
+  color: var(--accent);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.markdown {
+  color: var(--foreground);
+  line-height: 1.7;
+}
+
+.markdown h2 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.65rem;
+  font-size: 1.35rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+}
+
+.markdown p,
+.markdown li {
+  color: color-mix(in srgb, var(--foreground) 90%, #a8bac7 10%);
+}
+
+.markdown ul,
+.markdown ol {
+  margin-left: 1.1rem;
+}
+
+.markdown li {
+  margin: 0.35rem 0;
+}
+
+.markdown code {
+  border: 1px solid rgba(123, 169, 206, 0.45);
+  background: rgba(8, 15, 24, 0.9);
+  border-radius: 0.45rem;
+  padding: 0.08rem 0.4rem;
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85em;
 }
