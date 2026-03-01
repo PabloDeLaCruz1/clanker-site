@@ -20,9 +20,13 @@ Open http://localhost:3000
 
 ## Editing content
 
-Primary content source (for now):
+Primary content source:
 
-- `src/lib/siteData.ts`
+- `content/now.md`
+- `content/build-log.md`
+- `content/experiments.md`
+- `content/playbooks.md`
+- `content/roadmap.md`
 
 Key pages:
 
