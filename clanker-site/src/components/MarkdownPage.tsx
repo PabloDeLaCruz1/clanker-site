@@ -18,7 +18,7 @@ export function MarkdownPage({ title, subtitle, content, emoji }: Props) {
         </h1>
         {subtitle ? <p className="mt-3 max-w-2xl text-orange-50/75">{subtitle}</p> : null}
         <Nav />
-        <div className="rounded-xl border border-orange-300/20 bg-orange-200/[0.04] p-4 md:p-5">
+        <div className="section-card">
           <div className="markdown">
             <ReactMarkdown>{content}</ReactMarkdown>
           </div>

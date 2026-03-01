@@ -20,7 +20,7 @@ export default async function Home() {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-orange-50">Now</h2>
           <p className="text-lg text-orange-50/85">{now.data.focus}</p>
-          <div className="rounded-xl border border-orange-300/20 bg-orange-200/[0.04] p-4 md:p-5">
+          <div className="section-card">
             <div className="markdown">
               <ReactMarkdown>{now.content}</ReactMarkdown>
             </div>
