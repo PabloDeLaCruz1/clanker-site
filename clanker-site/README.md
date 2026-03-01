@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# clanker-site
 
-## Getting Started
+Public project journal for **clanker.site**.
 
-First, run the development server:
+## Stack
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Vercel hosting
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Editing content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Primary content source (for now):
 
-## Learn More
+- `src/lib/siteData.ts`
 
-To learn more about Next.js, take a look at the following resources:
+Key pages:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `/` → `src/app/page.tsx` (Now)
+- `/build-log` → `src/app/build-log/page.tsx`
+- `/experiments` → `src/app/experiments/page.tsx`
+- `/playbooks` → `src/app/playbooks/page.tsx`
+- `/roadmap` → `src/app/roadmap/page.tsx`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment workflow
 
-## Deploy on Vercel
+This repo is connected to Vercel.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Push to `main` → automatic production deploy
+- Pull requests → preview deploys (when used)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Standard loop:
+
+1. Edit
+2. Commit
+3. Push
+4. Verify deploy in Vercel
+
+## Backend rule
+
+Stay frontend-first until a backend is required for:
+
+- secrets/server-only keys
+- scheduled jobs/webhooks
+- auth/private state
+- heavier orchestration
+
+Then introduce a Python backend intentionally.

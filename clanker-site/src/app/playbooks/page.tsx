@@ -5,6 +5,9 @@ export default function PlaybooksPage() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-12">
       <h1 className="text-4xl font-bold tracking-tight">Playbooks</h1>
+      <p className="mt-3 text-black/80 dark:text-white/80">
+        Repeatable workflows we use to go from idea to shipped artifact quickly.
+      </p>
       <Nav />
       <div className="space-y-4">
         {siteData.playbooks.map((playbook) => (
