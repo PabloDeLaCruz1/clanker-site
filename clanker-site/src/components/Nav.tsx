@@ -1,11 +1,11 @@
 import Link from "next/link";
 
 const links = [
-  ["/", "Now"],
-  ["/build-log", "Build Log"],
-  ["/experiments", "Experiments"],
-  ["/playbooks", "Playbooks"],
-  ["/roadmap", "Roadmap"],
+  ["/", "⚡ Now"],
+  ["/build-log", "🧱 Build Log"],
+  ["/experiments", "🧪 Experiments"],
+  ["/playbooks", "🧭 Playbooks"],
+  ["/roadmap", "🛰️ Roadmap"],
 ] as const;
 
 export function Nav() {
@@ -15,7 +15,7 @@ export function Nav() {
         <Link
           key={href}
           href={href}
-          className="rounded-full border border-cyan-300/25 bg-cyan-200/5 px-4 py-2 text-cyan-100/90 transition hover:border-cyan-200/60 hover:bg-cyan-200/10 hover:text-cyan-50"
+          className="rounded-full border border-orange-300/30 bg-orange-200/5 px-4 py-2 text-orange-100/90 transition hover:border-orange-200/70 hover:bg-orange-200/10 hover:text-orange-50"
         >
           {label}
         </Link>

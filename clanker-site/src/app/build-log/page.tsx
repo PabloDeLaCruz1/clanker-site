@@ -8,6 +8,7 @@ export default async function BuildLogPage() {
     <MarkdownPage
       title={doc.data.title ?? "Build Log"}
       subtitle="Timestamped notes on what we shipped, changed, and learned."
+      emoji="🧱"
       content={doc.content}
     />
   );

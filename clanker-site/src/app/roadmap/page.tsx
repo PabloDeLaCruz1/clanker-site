@@ -8,6 +8,7 @@ export default async function RoadmapPage() {
     <MarkdownPage
       title={doc.data.title ?? "Roadmap"}
       subtitle="What's next, in order of expected impact."
+      emoji="🛰️"
       content={doc.content}
     />
   );
