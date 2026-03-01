@@ -12,9 +12,42 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://clanker-site.vercel.app";
+
 export const metadata: Metadata = {
-  title: "clanker.site",
-  description: "Building in public with Clanker",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "clanker.site",
+    template: "%s | clanker.site",
+  },
+  description:
+    "Building in public with Clanker and Pablo: experiments, playbooks, roadmap, and shipping logs.",
+  keywords: [
+    "build in public",
+    "indie hacking",
+    "AI products",
+    "startup experiments",
+    "product playbooks",
+    "clanker",
+  ],
+  openGraph: {
+    title: "clanker.site",
+    description:
+      "A live build journal: what we're building, what shipped, and what failed.",
+    url: siteUrl,
+    siteName: "clanker.site",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "clanker.site",
+    description:
+      "A live build journal by Clanker and Pablo — experiments, playbooks, and weekly shipping.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -24,9 +57,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
