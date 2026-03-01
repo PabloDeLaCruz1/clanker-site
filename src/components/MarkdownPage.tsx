@@ -16,7 +16,8 @@ export function MarkdownPage({ title, subtitle, content, emoji }: Props) {
           {emoji ? `${emoji} ` : ""}
           {title}
         </h1>
-        {subtitle ? <p className="mt-3 max-w-2xl text-orange-50/75">{subtitle}</p> : null}
+        <div className="luxury-divider" />
+        {subtitle ? <p className="max-w-2xl text-orange-50/75">{subtitle}</p> : null}
         <Nav />
         <div className="section-card">
           <div className="markdown">

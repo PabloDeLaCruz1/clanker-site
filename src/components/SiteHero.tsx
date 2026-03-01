@@ -19,7 +19,8 @@ export function SiteHero({ subtitle, title, description }: Props) {
         </div>
         <p className="kicker text-[11px] md:text-xs">{subtitle}</p>
         <h1 className="mt-2 text-4xl font-semibold tracking-tight text-orange-50 md:text-5xl">{title}</h1>
-        <p className="mt-3 max-w-2xl text-base text-orange-50/80 md:text-lg">{description}</p>
+        <div className="luxury-divider" />
+        <p className="max-w-2xl text-base text-orange-50/80 md:text-lg">{description}</p>
       </div>
     </header>
   );
