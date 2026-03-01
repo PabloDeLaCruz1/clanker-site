@@ -3,6 +3,27 @@ title: "Build Log"
 updated: "2026-03-01"
 ---
 
+## 2026-03-01 — Full build recap published
+
+Today we went from blank workspace to a live, branded, documented site with a repeatable shipping workflow.
+
+### What we completed
+
+- Chose strategy: frontend-first with explicit backend trigger rules
+- Scaffolded Next.js app and shipped v1 page structure
+- Connected GitHub repo + Vercel and confirmed auto-deploys on push
+- Migrated all core content to markdown-powered pages
+- Designed and iterated a modern dark neo-cyber visual system
+- Set lobster-based brand palette and shipped first Clanker avatar
+- Added and refined navigation behavior, hierarchy, and premium polish
+- Built a practical Use Cases section organized by jobs-to-be-done
+- Added LinkedIn DM close so visitors can start conversations immediately
+- Ran an OpenClaw security review and applied safe permission fixes
+- Set up Mac power profile scripts to support always-on operation
+- Installed OBS for recording build sessions and future content creation
+
+Tags: `recap` `shipping` `milestone`
+
 ## 2026-03-01 — Narrative clarified: the product is the operating loop
 
 We aligned on the core story: this is not just a site build. The real product is an AI agent (Clanker) operating on a real Mac via OpenClaw, and the site documents that execution in public.
