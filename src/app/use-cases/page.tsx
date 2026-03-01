@@ -7,7 +7,7 @@ export default async function UseCasesPage() {
   return (
     <MarkdownPage
       title={doc.data.title ?? "Use Cases"}
-      subtitle="Practical ways people can use Clawbot + OpenClaw agents to move faster."
+      subtitle="A jobs-to-be-done framework for turning agent capability into real business outcomes."
       emoji="🧩"
       content={doc.content}
     />

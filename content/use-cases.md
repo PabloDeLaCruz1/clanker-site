@@ -3,48 +3,75 @@ title: "Use Cases"
 updated: "2026-03-01"
 ---
 
-## Founder Operator Loop *(daily)*
+Most people don’t buy "AI" — they buy better outcomes.
 
-- Start in chat from phone with one goal for the day
-- Let Clanker execute on Mac (code edits, deploys, docs, updates)
-- Review output asynchronously and make decisions quickly
+So we organize use cases by job-to-be-done, not job title.
 
-**Why it matters:** removes context-switching and keeps shipping momentum high.
+## 1) Capture
 
-## Build-in-Public Engine
+Turn messy inputs into structured, usable information.
 
-- Automatically capture what changed
-- Turn work into clear changelog + narrative updates
-- Publish learnings fast instead of polishing for weeks
+- Ingest emails, notes, voice memos, PDFs, and forms
+- Normalize key fields and remove duplicate manual entry
+- Route clean records into your operating workflow
 
-**Why it matters:** distribution and trust compound while you build.
+**Examples:** client intake, patient admin prep, lead qualification, onboarding forms.
 
-## Fast Prototype to Production
+**Before → After:** scattered inputs and manual copy-paste → one clean intake stream.
 
-- Scaffold a web app in one session
-- Connect GitHub + Vercel
-- Iterate from mobile prompts while the Mac does execution
+## 2) Decide
 
-**Why it matters:** dramatically lower time from idea to live URL.
+Compress context and propose the next best actions.
 
-## Agent-Assisted Product Design
+- Summarize long threads or case history
+- Surface risks, deadlines, blockers, and opportunities
+- Generate a prioritized action queue for the day
 
-- Rapidly test visual directions and copy
-- Keep revisions in git with reversible commits
-- Optimize UI based on real feedback loops
+**Examples:** legal case prep, founder daily planning, operations triage.
 
-**Why it matters:** better quality without design paralysis.
+**Before → After:** too much context and decision fatigue → fast, confident prioritization.
 
-## Security-Aware Ops Assistant
+## 3) Execute
 
-- Run read-only audits on demand
-- Patch low-risk config issues quickly
-- Keep human approvals for sensitive changes
+Automate repeatable digital work across tools.
 
-**Why it matters:** speed without reckless automation.
+- Draft documents and follow-ups
+- Run checklists and update systems
+- Move tasks from "pending" to "done" with human approval gates
 
-## Who this is for
+**Examples:** proposal generation, status updates, handoff documentation, CRM hygiene.
 
-- Solo founders and indie hackers
-- Small teams with high opportunity cost
-- Builders who need execution leverage, not more dashboards
+**Before → After:** repetitive manual ops → consistent execution at lower cost.
+
+## 4) Monitor
+
+Watch important systems and alert only when intervention is needed.
+
+- Track deadlines, queue health, and exception conditions
+- Detect anomalies and policy drift
+- Notify the right person with actionable context
+
+**Examples:** SLA monitoring, compliance checkpoints, deployment/watchdog alerts.
+
+**Before → After:** reactive firefighting → proactive, low-noise oversight.
+
+## 5) Report
+
+Convert activity into decision-grade outputs.
+
+- Generate daily/weekly summaries
+- Produce stakeholder updates with evidence trails
+- Keep leadership visibility high without extra admin load
+
+**Examples:** executive briefings, client updates, project health reports.
+
+**Before → After:** unclear progress and reporting overhead → clear narrative + accountability.
+
+## Industry overlays (applies across all 5)
+
+- Professional services (law, accounting, consulting)
+- Healthcare administration
+- Operations and back-office teams
+- Founder/operator workflows
+
+The point: same operating model, different domain context.
