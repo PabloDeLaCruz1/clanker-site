@@ -75,3 +75,7 @@ Convert activity into decision-grade outputs.
 - Founder/operator workflows
 
 The point: same operating model, different domain context.
+
+---
+
+If you want, send us your current workflow and we’ll map it to **Capture / Decide / Execute / Monitor / Report** with a practical first automation plan.
