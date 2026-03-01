@@ -7,7 +7,7 @@ export default async function Home() {
   const now = await getMarkdownDoc("now.md");
 
   return (
-    <main className="mx-auto max-w-4xl px-6 pb-12 pt-28">
+    <main className="mx-auto max-w-5xl px-6 pb-12 pt-10 lg:pl-72">
       <section className="panel px-6 py-7 md:px-8 md:py-8">
         <SiteHero
           subtitle={now.data.subtitle}
