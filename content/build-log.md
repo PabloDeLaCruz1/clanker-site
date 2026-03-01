@@ -21,6 +21,8 @@ Today we went from blank workspace to a live, branded, documented site with a re
 - Ran an OpenClaw security review and applied safe permission fixes
 - Set up Mac power profile scripts to support always-on operation
 - Installed OBS for recording build sessions and future content creation
+- Validated browser relay control on YouTube and Yahoo for live web-task demos
+- Recorded first workflow session and completed YouTube Studio details flow for publishing
 
 Tags: `recap` `shipping` `milestone`
 
