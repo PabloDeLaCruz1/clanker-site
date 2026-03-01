@@ -1,41 +1,36 @@
 ---
 title: "Build Log"
-
 updated: "2026-03-01"
 ---
 
-## 2026-03-01 — Narrative clarified: the product is the operating loop
+GitHub-style ship log for `clanker-site`.
 
-We aligned on the core story: this is not just a site build. The real product is an AI agent (Clanker) operating on a real Mac via OpenClaw, and the site documents that execution in public.
+## Commit timeline
 
-Tags: `strategy` `positioning` `story`
+- `75f4368` — Add Vercel Analytics package and component
+- `2c69dd2` — Use custom SVG icon for YouTube nav tab
+- `930e9f7` — Add YouTube channel tab link in main navigation
+- `f2a60fc` — Update site content with YouTube narrative and emoji-enhanced now status
+- `54a70e8` — Simplify use-cases closing to LinkedIn DM only
+- `1b0d632` — Add hybrid CTA copy for LinkedIn DM plus intake form
+- `2832b65` — Add CTA to Use Cases page for workflow mapping
+- `dfcd665` — Reframe Use Cases page by jobs-to-be-done categories
+- `3c4389b` — Add Use Cases tab and page for practical Clawbot workflows
+- `c598f56` — Apply final luxury polish with subtle motion and refined dividers
+- `206ae4f` — Polish premium UI rhythm, micro-interactions, and hero status chip
+- `5fd1909` — Refine premium top navbar and remove sidebar layout
+- `c6fa7f4` — Switch to sidebar navigation layout with mobile fallback
+- `07305a4` — Fix nav jump with fixed top navigation and consistent page offset
+- `e2f38b4` — Update site content to reflect actual build scope and progress
+- `da5fb6c` — Refactor to neo-cyber minimalist UI with lobster palette and avatar
+- `8633607` — Restyle UI to modern dark futurist cyber-minimal theme
+- `3dac2cd` — Phase 2: move site content to markdown-powered pages
+- `7b52604` — Highlight OpenClaw-on-Mac setup in site story and memory
+- `33f72ae` — Polish site content, SEO metadata, and README workflow
+- `4b62665` — Test auto-deploy: tiny content update
+- `cd4d787` — Scaffold clanker.site v1 frontend with core pages
 
-## 2026-03-01 — Neo-cyber design system pass shipped
+## Notes
 
-Refactored the UI into a modern dark minimalist style with a lobster-inspired palette, cleaner visual hierarchy, and first avatar assets.
-
-Tags: `design` `branding` `ui`
-
-## 2026-03-01 — Content architecture moved to markdown
-
-Replaced hardcoded page data with markdown-driven content files for faster edits and a better publishing workflow.
-
-Tags: `content` `architecture` `workflow`
-
-## 2026-03-01 — OpenClaw Mac setup is live
-
-Clanker now has an operating loop on a dedicated Mac via OpenClaw, enabling real build-and-ship execution from chat.
-
-Tags: `infra` `workflow` `ai-agent`
-
-## 2026-03-01 — Production deployment is live
-
-Deployed clanker.site on Vercel and verified a working GitHub auto-deploy pipeline.
-
-Tags: `deploy` `ops`
-
-## 2026-03-01 — v1 direction locked
-
-Chose frontend-first architecture to maximize shipping speed while keeping a clean path to backend expansion.
-
-Tags: `strategy` `architecture`
+- Repository: https://github.com/PabloDeLaCruz1/clanker-site
+- Deploys: auto-triggered from `main` via Vercel
