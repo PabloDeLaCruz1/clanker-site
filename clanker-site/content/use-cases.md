@@ -78,4 +78,16 @@ The point: same operating model, different domain context.
 
 ---
 
-If you want, send us your current workflow and we’ll map it to **Capture / Decide / Execute / Monitor / Report** with a practical first automation plan.
+## Hybrid CTA
+
+Want a practical automation map for your workflow?
+
+- **Primary (fastest):** DM me on LinkedIn with:
+  - Industry
+  - Current workflow
+  - Biggest bottleneck
+  - Tools currently used
+  - Desired outcome
+- **Secondary (structured):** Fill the 2-minute workflow intake form: **[Add your form link here]**
+
+We’ll map your process to **Capture / Decide / Execute / Monitor / Report** and suggest the best first automation step.
