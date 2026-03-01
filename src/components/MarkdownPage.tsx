@@ -10,7 +10,7 @@ type Props = {
 
 export function MarkdownPage({ title, subtitle, content, emoji }: Props) {
   return (
-    <main className="mx-auto max-w-4xl px-6 py-12">
+    <main className="mx-auto max-w-4xl px-6 pb-12 pt-28">
       <section className="panel px-6 py-7 md:px-8 md:py-8">
         <h1 className="text-4xl font-semibold tracking-tight text-orange-50">
           {emoji ? `${emoji} ` : ""}
