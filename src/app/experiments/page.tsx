@@ -8,6 +8,7 @@ export default async function ExperimentsPage() {
     <MarkdownPage
       title={doc.data.title ?? "Experiments"}
       subtitle="Live bets we're running right now, with clear outcomes over time."
+      emoji="🧪"
       content={doc.content}
     />
   );

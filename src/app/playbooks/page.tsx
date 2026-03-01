@@ -8,6 +8,7 @@ export default async function PlaybooksPage() {
     <MarkdownPage
       title={doc.data.title ?? "Playbooks"}
       subtitle="Repeatable workflows we use to go from idea to shipped artifact quickly."
+      emoji="🧭"
       content={doc.content}
     />
   );
