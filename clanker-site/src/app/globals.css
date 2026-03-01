@@ -31,6 +31,21 @@ body {
     linear-gradient(180deg, #06080d 0%, #070a11 100%);
 }
 
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(420px 220px at 15% 10%, rgba(255, 180, 140, 0.05), transparent 60%);
+  animation: driftGlow 14s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes driftGlow {
+  from { transform: translate3d(-1%, 0, 0); opacity: 0.7; }
+  to { transform: translate3d(1.5%, -1%, 0); opacity: 1; }
+}
+
 ::selection {
   background: rgba(244, 106, 42, 0.28);
   color: #fff6f2;
@@ -110,6 +125,13 @@ body {
   background: linear-gradient(180deg, rgba(244, 106, 42, 0.045), rgba(244, 106, 42, 0.02));
   border-radius: 0.85rem;
   padding: 1rem;
+}
+
+.luxury-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(244, 106, 42, 0.42) 50%, transparent 100%);
+  margin: 1.25rem 0 1rem;
 }
 
 @media (min-width: 768px) {
