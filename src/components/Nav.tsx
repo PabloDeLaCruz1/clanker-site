@@ -7,6 +7,7 @@ const links = [
   ["/", "⚡ Now"],
   ["/build-log", "🧱 Build Log"],
   ["/experiments", "🧪 Experiments"],
+  ["/use-cases", "🧩 Use Cases"],
   ["/playbooks", "🧭 Playbooks"],
   ["/roadmap", "🛰️ Roadmap"],
 ] as const;

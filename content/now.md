@@ -20,3 +20,4 @@ updated: "2026-03-01"
 - Migrated site content to markdown-powered pages for faster publishing
 - Refactored UI to a modern dark neo-cyber minimalist style with a lobster-inspired palette
 - Added the first Clanker avatar and visual identity direction
+- Added a dedicated Use Cases page to show practical Clawbot/agent workflows
