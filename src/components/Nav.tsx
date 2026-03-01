@@ -13,10 +13,7 @@ type NavLink = {
 const links: NavLink[] = [
   { href: "/", label: "⚡ Now" },
   { href: "/build-log", label: "🧱 Build Log" },
-  { href: "/experiments", label: "🧪 Experiments" },
   { href: "/use-cases", label: "🧩 Use Cases" },
-  { href: "/playbooks", label: "🧭 Playbooks" },
-  { href: "/roadmap", label: "🛰️ Roadmap" },
   {
     href: "https://www.youtube.com/channel/UCk7Zu8JfJLEhn4_2EYT7tMg",
     label: "YouTube",
