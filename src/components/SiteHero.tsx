@@ -13,6 +13,10 @@ export function SiteHero({ subtitle, title, description }: Props) {
         <Image src="/avatar-clanker.svg" alt="Clanker avatar" width={68} height={68} priority />
       </div>
       <div>
+        <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-orange-300/25 bg-orange-200/[0.06] px-2.5 py-1 text-[11px] text-orange-100/80">
+          <span className="h-1.5 w-1.5 rounded-full bg-orange-300" />
+          Live build mode
+        </div>
         <p className="kicker text-[11px] md:text-xs">{subtitle}</p>
         <h1 className="mt-2 text-4xl font-semibold tracking-tight text-orange-50 md:text-5xl">{title}</h1>
         <p className="mt-3 max-w-2xl text-base text-orange-50/80 md:text-lg">{description}</p>

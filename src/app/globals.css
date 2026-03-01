@@ -55,12 +55,17 @@ body {
 .markdown {
   color: color-mix(in srgb, var(--foreground) 90%, #d8dde5 10%);
   line-height: 1.72;
+  font-size: 1.02rem;
+}
+
+.markdown > * + * {
+  margin-top: 0.75rem;
 }
 
 .markdown h2 {
-  margin-top: 1.75rem;
+  margin-top: 2rem;
   margin-bottom: 0.65rem;
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: 640;
   letter-spacing: 0.01em;
   color: #fff2ec;
@@ -71,6 +76,11 @@ body {
 .markdown ul,
 .markdown ol { margin-left: 1.1rem; }
 .markdown li { margin: 0.35rem 0; }
+
+.markdown strong {
+  color: #ffe5d8;
+  font-weight: 620;
+}
 
 .markdown code {
   border: 1px solid rgba(244, 106, 42, 0.42);
@@ -85,4 +95,25 @@ body {
 .avatar-ring {
   border: 1px solid rgba(244, 106, 42, 0.55);
   box-shadow: 0 0 0 2px rgba(244, 106, 42, 0.12), 0 0 24px rgba(244, 106, 42, 0.2);
+}
+
+.premium-link {
+  transition: transform 180ms ease, box-shadow 220ms ease, border-color 220ms ease, background-color 220ms ease;
+}
+
+.premium-link:hover {
+  transform: translateY(-1px);
+}
+
+.section-card {
+  border: 1px solid rgba(244, 106, 42, 0.2);
+  background: linear-gradient(180deg, rgba(244, 106, 42, 0.045), rgba(244, 106, 42, 0.02));
+  border-radius: 0.85rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .section-card {
+    padding: 1.15rem 1.2rem;
+  }
 }

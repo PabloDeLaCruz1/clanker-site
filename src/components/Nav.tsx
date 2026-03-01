@@ -23,7 +23,7 @@ export function Nav() {
             <Link
               key={href}
               href={href}
-              className={`rounded-xl border px-3.5 py-2 text-sm transition ${
+              className={`premium-link rounded-xl border px-3.5 py-2 text-sm ${
                 active
                   ? "border-orange-300/70 bg-orange-300/15 text-orange-50 shadow-[0_0_18px_rgba(244,106,42,0.18)]"
                   : "border-orange-300/20 bg-orange-200/5 text-orange-100/90 hover:border-orange-200/65 hover:bg-orange-200/10 hover:text-orange-50"
