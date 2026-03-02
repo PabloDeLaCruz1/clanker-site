@@ -49,6 +49,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: [{ url: "/avatar-clanker.svg", type: "image/svg+xml" }],
+    shortcut: "/avatar-clanker.svg",
+    apple: "/avatar-clanker.svg",
+  },
 };
 
 export default function RootLayout({
