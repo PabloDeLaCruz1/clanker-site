@@ -1,0 +1,20 @@
+{
+  "name": "clanker-video",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "studio": "remotion studio src/index.jsx",
+    "render": "remotion render src/index.jsx ClankerPromoShort out/promo-short.mp4",
+    "render:preview": "remotion render src/index.jsx ClankerPromoShort out/promo-short-preview.mp4 --frames=0-299"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@remotion/cli": "^4.0.431",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "remotion": "^4.0.431"
+  }
+}
