@@ -25,3 +25,4 @@ updated: "2026-03-01"
 - 📚 Documented a full public build recap covering product, design, infra, security, and recording stack
 - 🎬 Installed OBS and recorded/published our first workflow session to YouTube Studio
 - 📡 Validated browser relay control for real web execution demos
+- 📈 Added a Trends memo workflow to track AI + market signals with clear actions
