@@ -7,6 +7,7 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
+- `TBD` — Add Workflow Lab tab with live prototype gallery and status chips
 - `75f4368` — Add Vercel Analytics package and component
 - `2c69dd2` — Use custom SVG icon for YouTube nav tab
 - `930e9f7` — Add YouTube channel tab link in main navigation

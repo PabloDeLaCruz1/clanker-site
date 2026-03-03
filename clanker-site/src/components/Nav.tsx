@@ -14,6 +14,7 @@ const links: NavLink[] = [
   { href: "/", label: "⚡ Now" },
   { href: "/build-log", label: "🧱 Build Log" },
   { href: "/use-cases", label: "🧩 Use Cases" },
+  { href: "/workflow-lab", label: "🧪 Workflow Lab" },
   { href: "/trends", label: "📈 Trends" },
   {
     href: "https://www.youtube.com/channel/UCk7Zu8JfJLEhn4_2EYT7tMg",
