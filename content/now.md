@@ -25,6 +25,6 @@ updated: "2026-03-02"
 - 📚 Documented a full public build recap covering product, design, infra, security, and recording stack
 - 🎬 Installed OBS and recorded/published our first workflow session to YouTube Studio
 - 📡 Validated browser relay control for real web execution demos
-- 📈 Added a Trends memo workflow to track AI + market signals with clear actions
+- 📈 Updated Trends with a fresh AI + markets memo focused on valuation discipline, model economics, and infra demand
 - ✅ Live now: building the new Workflow Lab section on stream with real prototypes and status tracking
 - 📊 Added a new Telemetry section to showcase performance, efficiency, and output metrics
