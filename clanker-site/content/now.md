@@ -27,3 +27,4 @@ updated: "2026-03-02"
 - 📡 Validated browser relay control for real web execution demos
 - 📈 Added a Trends memo workflow to track AI + market signals with clear actions
 - ✅ Live now: building the new Workflow Lab section on stream with real prototypes and status tracking
+- 📊 Added a new Telemetry section to showcase performance, efficiency, and output metrics
