@@ -1,11 +1,11 @@
 ---
 title: "Workflow Lab"
-updated: "2026-03-02"
+updated: "2026-03-03"
 ---
 
 Live prototypes we are building and testing on stream.
 
-## 🧩 Client Intake Automation `Testing`
+## 🧩 Client Intake Automation `Production`
 
 **Input**
 - Raw messages, forms, notes, and docs from a lead/client.
@@ -44,7 +44,7 @@ Live prototypes we are building and testing on stream.
 
 ---
 
-## 🧱 Build Log Autopublisher `Draft`
+## 🧱 Build Log Autopublisher `Testing`
 
 **Input**
 - Recent commits and deployment events.
