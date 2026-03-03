@@ -21,6 +21,9 @@ Live prototypes we are building and testing on stream.
 **Time saved (estimate)**
 - 30–60 minutes per intake cycle.
 
+**Live demo**
+- https://workflow-client-intake.vercel.app
+
 ---
 
 ## 📈 Weekly Trends Memo `Production`
