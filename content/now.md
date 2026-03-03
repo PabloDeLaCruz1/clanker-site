@@ -26,4 +26,4 @@ updated: "2026-03-02"
 - 🎬 Installed OBS and recorded/published our first workflow session to YouTube Studio
 - 📡 Validated browser relay control for real web execution demos
 - 📈 Added a Trends memo workflow to track AI + market signals with clear actions
-- ⏭️ Later today: run a live “Workflow Makeover” stream segment (Capture → Decide → Execute → Monitor → Report) and publish the outcomes
+- ✅ Live now: building the new Workflow Lab section on stream with real prototypes and status tracking
