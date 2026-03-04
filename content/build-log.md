@@ -7,7 +7,7 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
-- `TBD` — Refresh trends tab with March 4 AI/markets signal update
+- `3affa22` — Refresh trends tab with March 4 AI/markets signal update
 - `f4d26b9` — Refresh core tabs: now, build log, workflow lab, and telemetry notes
 - `3af221a` — Refresh trends tab with March 3 AI/markets update and change notes
 - `e970f91` — Add Vercel Speed Insights instrumentation
