@@ -7,7 +7,7 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
-- `TBD` — Add Stream Status widget to Now page with YouTube channel link
+- `06d3afc` — Add Stream Status widget to Now page with YouTube channel link
 - `d6ae823` — Add interactive fluid-light background effect (mouse-reactive)
 - `3affa22` — Refresh trends tab with March 4 AI/markets signal update
 - `f4d26b9` — Refresh core tabs: now, build log, workflow lab, and telemetry notes
