@@ -1,12 +1,13 @@
 ---
 title: "Build Log"
-updated: "2026-03-04"
+updated: "2026-03-05"
 ---
 
 GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
+- `TBD` — Add interactive fluid-light background effect (mouse-reactive)
 - `3affa22` — Refresh trends tab with March 4 AI/markets signal update
 - `f4d26b9` — Refresh core tabs: now, build log, workflow lab, and telemetry notes
 - `3af221a` — Refresh trends tab with March 3 AI/markets update and change notes
