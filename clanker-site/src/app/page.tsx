@@ -1,3 +1,4 @@
+import { MarketFeed } from "@/components/MarketFeed";
 import { Nav } from "@/components/Nav";
 import { SiteHero } from "@/components/SiteHero";
 import { getMarkdownDoc } from "@/lib/content";
@@ -59,6 +60,8 @@ export default async function Home() {
               ▶ Open channel
             </a>
           </div>
+
+          <MarketFeed />
         </section>
       </section>
     </main>
