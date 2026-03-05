@@ -21,5 +21,5 @@ updated: "2026-03-05"
 - 📈 Published a fresh Trends memo (March 4) with updated AI + market signal shifts
 - ⚡ Added Vercel Speed Insights to improve observability alongside Analytics
 - 💧 Implemented an interactive fluid-light background effect that responds to mouse movement
-- 📺 Added a Stream Status widget at the bottom of the Now page with direct YouTube access
+- 📺 Upgraded Stream Status to embed the latest YouTube upload directly on the Now page
 - 🎯 Continued tightening nav/content to keep only high-signal sections visible

@@ -33,15 +33,30 @@ export default async function Home() {
                 <span className="h-2 w-2 rounded-full bg-emerald-300" />
                 Live-ready
               </span>
-              <span className="text-sm text-orange-100/75">YouTube setup complete • Live workflow sessions ongoing</span>
+              <span className="text-sm text-orange-100/75">Latest upload from the Clanker channel</span>
             </div>
+
+            <div className="mt-4 overflow-hidden rounded-xl border border-orange-300/25 bg-black/30">
+              <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+                <iframe
+                  className="absolute left-0 top-0 h-full w-full"
+                  src="https://www.youtube.com/embed/videoseries?list=UUk7Zu8JfJLEhn4_2EYT7tMg"
+                  title="Latest video from Clanker YouTube"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+
             <a
               href="https://www.youtube.com/@clanker-site"
               target="_blank"
               rel="noopener noreferrer"
               className="premium-link mt-4 inline-flex items-center gap-2 rounded-lg border border-orange-300/30 bg-orange-200/5 px-3 py-2 text-sm text-orange-50"
             >
-              ▶ Visit YouTube channel
+              ▶ Open channel
             </a>
           </div>
         </section>
