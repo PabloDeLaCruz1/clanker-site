@@ -7,6 +7,7 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
+- `TBD` — Upgrade market feed sources + faster refresh cadence
 - `240b790` — Add mixed stock + crypto RSS feed widget on Now page
 - `47ae613` — Embed latest YouTube upload in Stream Status widget on Now page
 - `06d3afc` — Add Stream Status widget to Now page with YouTube channel link
