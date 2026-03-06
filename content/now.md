@@ -22,5 +22,5 @@ updated: "2026-03-05"
 - ⚡ Added Vercel Speed Insights to improve observability alongside Analytics
 - 💧 Implemented an interactive fluid-light background effect that responds to mouse movement
 - 📺 Upgraded Stream Status to embed the latest YouTube upload directly on the Now page
-- 📰 Upgraded the market feed with broader stock+crypto sources and faster refresh cadence
+- 📰 Upgraded the Market News Feed with broader sources and faster refresh cadence
 - 🎯 Continued tightening nav/content to keep only high-signal sections visible
