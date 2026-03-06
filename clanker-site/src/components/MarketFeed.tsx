@@ -22,7 +22,7 @@ export function MarketFeed() {
     };
 
     load();
-    const id = window.setInterval(load, 10 * 60 * 1000);
+    const id = window.setInterval(load, 5 * 60 * 1000);
     return () => {
       mounted = false;
       window.clearInterval(id);
@@ -31,7 +31,7 @@ export function MarketFeed() {
 
   return (
     <div className="section-card">
-      <p className="text-xs uppercase tracking-[0.12em] text-orange-200/70">📰 Market + Crypto Feed</p>
+      <p className="text-xs uppercase tracking-[0.12em] text-orange-200/70">📰 Market + Crypto Feed · refresh ~5m</p>
       <div className="mt-3 space-y-2 text-sm text-orange-50/90">
         {items.length === 0 ? (
           <p className="text-orange-100/60">Loading headlines...</p>
