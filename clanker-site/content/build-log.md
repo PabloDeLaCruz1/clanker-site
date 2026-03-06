@@ -7,6 +7,7 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
+- `TBD` — Rename Market News Feed UI label and remove crypto wording
 - `5db1862` — Upgrade market feed sources + faster refresh cadence
 - `240b790` — Add mixed stock + crypto RSS feed widget on Now page
 - `47ae613` — Embed latest YouTube upload in Stream Status widget on Now page

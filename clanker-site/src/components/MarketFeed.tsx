@@ -31,7 +31,7 @@ export function MarketFeed() {
 
   return (
     <div className="section-card">
-      <p className="text-xs uppercase tracking-[0.12em] text-orange-200/70">📰 Market + Crypto Feed · refresh ~5m</p>
+      <p className="text-xs uppercase tracking-[0.12em] text-orange-200/70">📰 Market News Feed · refresh ~5m</p>
       <div className="mt-3 space-y-2 text-sm text-orange-50/90">
         {items.length === 0 ? (
           <p className="text-orange-100/60">Loading headlines...</p>
@@ -45,7 +45,7 @@ export function MarketFeed() {
               className="block rounded-lg border border-orange-300/15 bg-orange-200/[0.03] px-3 py-2 hover:border-orange-300/40"
             >
               <span className="mr-2 inline-block rounded-full border border-orange-300/30 px-2 py-0.5 text-[10px] uppercase tracking-wide text-orange-200/80">
-                {item.topic}
+                {item.topic === "crypto" ? "digital assets" : "stocks"}
               </span>
               {item.title}
               {item.source ? <span className="ml-2 text-orange-100/60">• {item.source}</span> : null}
