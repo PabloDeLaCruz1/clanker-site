@@ -7,7 +7,7 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
-- `TBD` — Post-travel status review and content freshness update
+- `b48f4e3` — Post-travel status review and content freshness update
 - `002b39e` — Rename Market News Feed UI label and remove crypto wording
 - `5db1862` — Upgrade market feed sources + faster refresh cadence
 - `240b790` — Add mixed stock + crypto RSS feed widget on Now page
