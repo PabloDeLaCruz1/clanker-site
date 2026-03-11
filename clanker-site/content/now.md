@@ -25,5 +25,5 @@ updated: "2026-03-11"
 - 📰 Upgraded the Market News Feed with broader sources and faster refresh cadence
 - ✅ Performed post-travel site health review and confirmed feed/video widgets are live
 - 🧠 Started a new Research Signal Intelligence Pipeline project using arXiv trend acceleration
-- 🔗 Linked the new pipeline repo in Workflow Lab for public review
+- 🧠 Added the new Research Signal Intelligence Pipeline use case to Workflow Lab
 - 🎯 Continued tightening nav/content to keep only high-signal sections visible
