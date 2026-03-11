@@ -60,9 +60,6 @@ Live prototypes we are building and testing on stream.
 **Time saved (estimate)**
 - 3–6 hours per week on trend scouting and synthesis.
 
-**Project link**
-- https://github.com/PabloDeLaCruz1/data-pipeline-lab
-
 ---
 
 ## 🧱 Build Log Autopublisher `Testing`
