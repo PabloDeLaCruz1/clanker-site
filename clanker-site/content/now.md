@@ -26,4 +26,5 @@ updated: "2026-03-11"
 - ✅ Performed post-travel site health review and confirmed feed/video widgets are live
 - 🧠 Started a new Research Signal Intelligence Pipeline project using arXiv trend acceleration
 - 🧠 Added the new Research Signal Intelligence Pipeline use case to Workflow Lab
+- 🌐 Deployed a web prototype for the pipeline so we can test through a website
 - 🎯 Continued tightening nav/content to keep only high-signal sections visible
