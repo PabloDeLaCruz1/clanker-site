@@ -1,6 +1,6 @@
 ---
 title: "Workflow Lab"
-updated: "2026-03-03"
+updated: "2026-03-11"
 ---
 
 Live prototypes we are building and testing on stream.
@@ -41,6 +41,27 @@ Live prototypes we are building and testing on stream.
 
 **Time saved (estimate)**
 - 2–4 hours per week.
+
+---
+
+## 🧠 Research Signal Intelligence Pipeline `Testing`
+
+**Input**
+- arXiv paper metadata (title, abstract, categories, publish date)
+
+**Agent actions**
+- Apply keyword taxonomy by theme
+- Compute daily mention shares
+- Score trend acceleration (7d vs prior 7d)
+
+**Output**
+- Early-signal trend tables and dashboard-ready metrics.
+
+**Time saved (estimate)**
+- 3–6 hours per week on trend scouting and synthesis.
+
+**Project link**
+- https://github.com/PabloDeLaCruz1/data-pipeline-lab
 
 ---
 

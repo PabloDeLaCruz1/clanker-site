@@ -1,12 +1,13 @@
 ---
 title: "Build Log"
-updated: "2026-03-09"
+updated: "2026-03-11"
 ---
 
 GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
+- `TBD` — Add Research Signal Intelligence Pipeline use case to Workflow Lab with project link
 - `b48f4e3` — Post-travel status review and content freshness update
 - `002b39e` — Rename Market News Feed UI label and remove crypto wording
 - `5db1862` — Upgrade market feed sources + faster refresh cadence
