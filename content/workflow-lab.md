@@ -60,6 +60,9 @@ Live prototypes we are building and testing on stream.
 **Time saved (estimate)**
 - 3–6 hours per week on trend scouting and synthesis.
 
+**Web prototype**
+- https://data-pipeline-lab-site.vercel.app
+
 ---
 
 ## 🧱 Build Log Autopublisher `Testing`
