@@ -1,6 +1,6 @@
 ---
 title: "Workflow Lab"
-updated: "2026-03-11"
+updated: "2026-03-12"
 ---
 
 Live prototypes we are building and testing on stream.
@@ -44,7 +44,7 @@ Live prototypes we are building and testing on stream.
 
 ---
 
-## 🧠 Research Signal Intelligence Pipeline `Testing`
+## 🧠 Research Signal Intelligence Pipeline `Testing (live data)`
 
 **Input**
 - arXiv paper metadata (title, abstract, categories, publish date)
