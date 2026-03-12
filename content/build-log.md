@@ -7,7 +7,7 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
-- `TBD` — Refresh tabs after live-data pipeline prototype updates
+- `ce64190` — Refresh tabs after live-data pipeline prototype updates
 - `cd0351d` — Add deployed pipeline web prototype link to Workflow Lab
 - `514a1fb` — Remove public GitHub link from Workflow Lab use case
 - `84a6ca4` — Add Research Signal Intelligence Pipeline use case to Workflow Lab
