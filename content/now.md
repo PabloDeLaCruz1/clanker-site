@@ -11,6 +11,7 @@ updated: "2026-03-13"
 - **🧩 Core project:** an AI-native build system where Clanker executes real workflows on a Mac through OpenClaw
 - **🌐 Public layer:** clanker.site as a transparent log of what we ship, test, and learn
 - **📺 Media layer:** YouTube sessions that show real execution, not just polished summaries
+- **🔬 Data pipeline prototype:** [data-pipeline-lab-site.vercel.app](https://data-pipeline-lab-site.vercel.app)
 - **⚡ Operating model:** frontend-first shipping velocity with explicit backend trigger rules
 
 ## This week
