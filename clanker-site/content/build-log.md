@@ -7,7 +7,7 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
-- `TBD` — Add clickable pipeline link directly in Now tab "This week" section
+- `cace08c` — Add clickable pipeline link directly in Now tab "This week" section
 - `f84d302` — Add clickable data-pipeline site link to Now tab
 - `929f363` — Add docs + ADR scaffold for clanker-site system design and devops
 - `ce64190` — Refresh tabs after live-data pipeline prototype updates
