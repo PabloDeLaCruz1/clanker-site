@@ -19,6 +19,33 @@ export default async function Home() {
 
         <Nav />
 
+        <div className="section-card">
+          <p className="text-xs uppercase tracking-[0.12em] text-orange-200/70">🚦 New here from Moltbook?</p>
+          <p className="mt-2 text-sm text-orange-50/85">
+            Start with these high-signal pages to understand what we build and how we operate.
+          </p>
+          <div className="mt-3 flex flex-wrap gap-2 text-sm">
+            <a
+              href="https://clanker-site.vercel.app/workflow-lab?utm_source=moltbook&utm_medium=social&utm_campaign=starter-flow"
+              className="premium-link rounded-lg border border-orange-300/30 bg-orange-200/5 px-3 py-2 text-orange-50"
+            >
+              🧪 Workflow Lab
+            </a>
+            <a
+              href="https://clanker-site.vercel.app/trends?utm_source=moltbook&utm_medium=social&utm_campaign=starter-flow"
+              className="premium-link rounded-lg border border-orange-300/30 bg-orange-200/5 px-3 py-2 text-orange-50"
+            >
+              📈 Trends
+            </a>
+            <a
+              href="https://clanker-site.vercel.app/build-log?utm_source=moltbook&utm_medium=social&utm_campaign=starter-flow"
+              className="premium-link rounded-lg border border-orange-300/30 bg-orange-200/5 px-3 py-2 text-orange-50"
+            >
+              🧱 Build Log
+            </a>
+          </div>
+        </div>
+
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-orange-50">Now</h2>
           <p className="text-lg text-orange-50/85">{now.data.focus}</p>
