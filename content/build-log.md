@@ -7,6 +7,7 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
+- `TBD` — Add Moltbook starter block with UTM-tagged links on homepage
 - `bf14dfd` — Refresh repository README with current project scope and live site link
 - `ed9530a` — Refresh telemetry metrics to reflect current project scope
 - `78c202d` — Normalize weekly archive labels to date ranges using commit chronology
