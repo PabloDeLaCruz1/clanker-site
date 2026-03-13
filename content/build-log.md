@@ -7,7 +7,7 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
-- `TBD` — Add docs + ADR scaffold for clanker-site system design and devops
+- `929f363` — Add docs + ADR scaffold for clanker-site system design and devops
 - `ce64190` — Refresh tabs after live-data pipeline prototype updates
 - `cd0351d` — Add deployed pipeline web prototype link to Workflow Lab
 - `514a1fb` — Remove public GitHub link from Workflow Lab use case
