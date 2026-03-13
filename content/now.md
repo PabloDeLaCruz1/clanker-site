@@ -22,3 +22,4 @@ Use the **Weekly Progress** selector below to view the current week or archived 
 
 - Moltbook autopilot is active with safe posting cadence
 - UTM-tagged starter links added so we can track Moltbook-to-site traffic quality
+- 📊 Telemetry now includes a dedicated "Top Moltbook entry page" tracking signal
