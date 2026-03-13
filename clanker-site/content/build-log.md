@@ -7,6 +7,7 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
+- `TBD` — Refresh telemetry metrics to reflect current project scope
 - `78c202d` — Normalize weekly archive labels to date ranges using commit chronology
 - `1eeb91e` — Add weekly archive selector for progress updates on Now tab
 - `cace08c` — Add clickable pipeline link directly in Now tab "This week" section
