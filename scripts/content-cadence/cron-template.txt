@@ -4,5 +4,11 @@
 # Daily refresh at 9:10 AM
 10 9 * * * /bin/zsh /Users/a123/.openclaw/workspace/scripts/content-cadence/daily-refresh.sh >> /Users/a123/.openclaw/workspace/scripts/content-cadence/daily.log 2>&1
 
-# Weekly refresh every Monday at 9:30 AM
-30 9 * * 1 /bin/zsh /Users/a123/.openclaw/workspace/scripts/content-cadence/weekly-refresh.sh >> /Users/a123/.openclaw/workspace/scripts/content-cadence/weekly.log 2>&1
+# Daily signal scan at 8:40 AM
+40 8 * * * /bin/zsh /Users/a123/.openclaw/workspace/scripts/content-cadence/daily-signal-scan.sh >> /Users/a123/.openclaw/workspace/scripts/content-cadence/signal.log 2>&1
+
+# Trends refresh twice weekly (Mon + Thu at 9:30 AM)
+30 9 * * 1,4 /bin/zsh /Users/a123/.openclaw/workspace/scripts/content-cadence/trends-refresh.sh >> /Users/a123/.openclaw/workspace/scripts/content-cadence/trends.log 2>&1
+
+# Weekly workflow/build-log hygiene (Mon 9:50 AM)
+50 9 * * 1 /bin/zsh /Users/a123/.openclaw/workspace/scripts/content-cadence/weekly-refresh.sh >> /Users/a123/.openclaw/workspace/scripts/content-cadence/weekly.log 2>&1

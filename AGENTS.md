@@ -28,8 +28,9 @@ For any shipped change to `clanker-site` (feature, content, design, infra, analy
 
 ### Cadence
 
-- Daily: refresh `now.md` + telemetry (`src/lib/telemetryData.ts`)
-- Weekly: refresh `trends.md` + `workflow-lab.md` + build-log hygiene
+- Daily: refresh `now.md` + telemetry (`src/lib/telemetryData.ts`) + run signal scan
+- Twice weekly: refresh `trends.md` (Mon/Thu)
+- Weekly: refresh `workflow-lab.md` + build-log hygiene
 - Policy/spec: `docs/content-cadence.md`
 - Script stubs: `scripts/content-cadence/`
 
