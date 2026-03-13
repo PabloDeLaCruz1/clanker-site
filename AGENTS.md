@@ -26,6 +26,13 @@ For any shipped change to `clanker-site` (feature, content, design, infra, analy
 3. Update `clanker-site/content/now.md` when user-visible direction/progress changes.
 4. Do not push `clanker-site` without checking build-log freshness first.
 
+### Cadence
+
+- Daily: refresh `now.md` + telemetry (`src/lib/telemetryData.ts`)
+- Weekly: refresh `trends.md` + `workflow-lab.md` + build-log hygiene
+- Policy/spec: `docs/content-cadence.md`
+- Script stubs: `scripts/content-cadence/`
+
 ## Memory
 
 You wake up fresh each session. These files are your continuity:

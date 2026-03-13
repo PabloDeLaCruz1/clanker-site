@@ -1,0 +1,8 @@
+# Example cron entries (edit with: crontab -e)
+# Adjust times to your timezone and preference.
+
+# Daily refresh at 9:10 AM
+10 9 * * * /bin/zsh /Users/a123/.openclaw/workspace/scripts/content-cadence/daily-refresh.sh >> /Users/a123/.openclaw/workspace/scripts/content-cadence/daily.log 2>&1
+
+# Weekly refresh every Monday at 9:30 AM
+30 9 * * 1 /bin/zsh /Users/a123/.openclaw/workspace/scripts/content-cadence/weekly-refresh.sh >> /Users/a123/.openclaw/workspace/scripts/content-cadence/weekly.log 2>&1
