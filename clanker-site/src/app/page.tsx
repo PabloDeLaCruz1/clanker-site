@@ -1,6 +1,7 @@
 import { MarketFeed } from "@/components/MarketFeed";
 import { Nav } from "@/components/Nav";
 import { SiteHero } from "@/components/SiteHero";
+import { WeeklyUpdates } from "@/components/WeeklyUpdates";
 import { getMarkdownDoc } from "@/lib/content";
 import ReactMarkdown from "react-markdown";
 
@@ -26,6 +27,8 @@ export default async function Home() {
               <ReactMarkdown>{now.content}</ReactMarkdown>
             </div>
           </div>
+
+          <WeeklyUpdates />
 
           <div className="section-card">
             <p className="text-xs uppercase tracking-[0.12em] text-orange-200/70">📺 Stream Status</p>

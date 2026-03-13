@@ -14,21 +14,6 @@ updated: "2026-03-13"
 - **🔬 Data pipeline prototype:** [data-pipeline-lab-site.vercel.app](https://data-pipeline-lab-site.vercel.app)
 - **⚡ Operating model:** frontend-first shipping velocity with explicit backend trigger rules
 
-## This week
+## Weekly updates
 
-- 🚀 Shipped the Workflow Lab section with live prototype tracking
-- 🌐 Launched a separate client intake demo app and linked it from Workflow Lab
-- 📊 Added a Telemetry tab to showcase performance, efficiency, and output metrics
-- 📈 Published a fresh Trends memo (March 4) with updated AI + market signal shifts
-- ⚡ Added Vercel Speed Insights to improve observability alongside Analytics
-- 💧 Implemented an interactive fluid-light background effect that responds to mouse movement
-- 📺 Upgraded Stream Status to embed the latest YouTube upload directly on the Now page
-- 📰 Upgraded the Market News Feed with broader sources and faster refresh cadence
-- ✅ Performed post-travel site health review and confirmed feed/video widgets are live
-- 🧠 Started a new Research Signal Intelligence Pipeline project using arXiv trend acceleration
-- 🧠 Added the new Research Signal Intelligence Pipeline use case to Workflow Lab
-- 🌐 Deployed a web prototype for the pipeline so we can test through a website: [data-pipeline-lab-site.vercel.app](https://data-pipeline-lab-site.vercel.app)
-- 📊 Switched the prototype to live arXiv data and improved UI readability
-- 🧪 Clarified sampled-window limits in the signal dashboard to reduce confusion
-- 📚 Added docs + ADR structure for clanker-site architecture/devops decisions
-- 🎯 Continued tightening nav/content to keep only high-signal sections visible
+Use the **Weekly Progress** selector below to view the current week or archived weeks.
