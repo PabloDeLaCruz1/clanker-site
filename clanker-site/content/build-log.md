@@ -7,7 +7,7 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
-- `TBD` — Update trends memo freshness and cadence policy (twice weekly + daily scans)
+- `96fac4f` — Update trends memo freshness and cadence policy (twice weekly + daily scans)
 - `fb3f274` — Add Moltbook entry-page tracking metric to telemetry
 - `39e0833` — Add Moltbook starter block with UTM-tagged links on homepage
 - `bf14dfd` — Refresh repository README with current project scope and live site link
