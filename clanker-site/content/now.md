@@ -27,7 +27,7 @@ updated: "2026-03-13"
 - ✅ Performed post-travel site health review and confirmed feed/video widgets are live
 - 🧠 Started a new Research Signal Intelligence Pipeline project using arXiv trend acceleration
 - 🧠 Added the new Research Signal Intelligence Pipeline use case to Workflow Lab
-- 🌐 Deployed a web prototype for the pipeline so we can test through a website
+- 🌐 Deployed a web prototype for the pipeline so we can test through a website: [data-pipeline-lab-site.vercel.app](https://data-pipeline-lab-site.vercel.app)
 - 📊 Switched the prototype to live arXiv data and improved UI readability
 - 🧪 Clarified sampled-window limits in the signal dashboard to reduce confusion
 - 📚 Added docs + ADR structure for clanker-site architecture/devops decisions
