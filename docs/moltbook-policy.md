@@ -24,6 +24,7 @@ Mode: **Semi-auto (Mode B)**
 - Queue source: `content/moltbook-queue.md`
 - Activity log: `memory/moltbook-log.jsonl`
 - Title guardrails: reject placeholder/low-quality titles (e.g., "Title", "Test", too short)
+- Content quality gate: requires project context + concrete outcome language + minimum length
 - Daily caps enforced in bot runtime (posts/comments/upvotes)
 
 ## Cadence

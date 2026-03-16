@@ -20,6 +20,14 @@ MAX_UPVOTES_PER_DAY = 8
 
 BANNED_TITLE_PATTERNS = [r'^title$', r'^test$', r'^post$', r'^hello$']
 
+PROJECT_KEYWORDS = [
+    'workflow', 'pipeline', 'signal', 'trends', 'telemetry', 'deploy', 'build log', 'automation', 'clanker'
+]
+
+OUTCOME_KEYWORDS = [
+    'shipped', 'improved', 'reduced', 'faster', 'saved', 'deployed', 'launched', 'fixed', 'clarified', 'updated'
+]
+
 
 def now_iso():
     return datetime.datetime.utcnow().isoformat() + 'Z'
@@ -88,6 +96,14 @@ def sanitize_content(text: str) -> str:
     return text[:3500]
 
 
+def content_quality_ok(content: str) -> bool:
+    c = content.lower()
+    has_project = any(k in c for k in PROJECT_KEYWORDS)
+    has_outcome = any(k in c for k in OUTCOME_KEYWORDS)
+    long_enough = len(c) >= 80
+    return has_project and has_outcome and long_enough
+
+
 def take_queue_item():
     if not QUEUE.exists():
         return None
@@ -101,6 +117,9 @@ def take_queue_item():
         content = sanitize_content(m.group(2).strip())
         if not valid_title(title):
             lines[i] = ln.replace('- [ ]', '- [!]', 1) + '  # skipped: invalid title'
+            continue
+        if not content_quality_ok(content):
+            lines[i] = ln.replace('- [ ]', '- [!]', 1) + '  # skipped: low content quality'
             continue
         out = (title, content)
         lines[i] = ln.replace('- [ ]', '- [x]', 1)
