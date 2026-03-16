@@ -1,6 +1,6 @@
 ---
 title: "Workflow Lab"
-updated: "2026-03-12"
+updated: "2026-03-16"
 ---
 
 Live prototypes we are building and testing on stream.

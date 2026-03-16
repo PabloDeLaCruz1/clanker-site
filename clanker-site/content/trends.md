@@ -1,60 +1,61 @@
 ---
 title: "Trends"
-updated: "2026-03-13"
+updated: "2026-03-16"
 ---
 
-## Trend Memo #4 — AI + Markets Update (March 13, 2026)
+## Trend Memo #5 — AI + Markets Update (March 16, 2026)
 
 ### What changed since the last update
 
-- **Valuation dispersion in SaaS remains the dominant theme**: execution quality and defensible workflows are still the separating factors.
-- **Model price/performance pressure continues**: expectations for lower-cost inference keep rising, compressing margins for undifferentiated apps.
-- **Infrastructure strength is still a support signal**: AI capex narratives remain more resilient than app-layer multiples.
-- **Signal quality now matters more than hype velocity**: teams with measurable workflow outcomes continue to outperform narrative-only positioning.
+- **SaaS quality dispersion is still the core market filter**: execution quality and durable workflow value remain more important than AI labeling.
+- **Model economics pressure persists**: faster/cheaper model options continue to shift buyer expectations toward ROI and cost-aware delivery.
+- **Infrastructure confidence remains resilient**: capex narratives still provide support to the broader AI build cycle.
+- **Signal velocity is stabilizing**: fewer novelty spikes, more emphasis on repeatable operational outcomes.
 
 ---
 
-### 🚨 Signal #1: SaaS repricing is now a quality filter
+### 🚨 Signal #1: SaaS repricing remains execution-driven
 
 **Why it matters**
-- Investors are rewarding proof of durable utility, not just AI branding.
-- Generic wrappers remain vulnerable to rapid commoditization.
+- Teams with measurable outcomes keep relative strength.
+- Generic wrappers remain exposed to rapid commoditization.
 
 **What we do**
-- Keep shipping publicly with measurable outputs.
-- Prioritize workflow ROI over feature sprawl.
-- Show execution evidence via build logs + telemetry.
+- Keep shipping publicly with outcome-oriented updates.
+- Tie releases to clear operator value (time saved, fewer manual steps).
+- Maintain tight signal-to-action loops each week.
 
 ---
 
-### 🚨 Signal #2: Cost efficiency is becoming a strategic moat
+### 🚨 Signal #2: Price/performance competition is now baseline
 
 **Why it matters**
-- Falling model costs help builders, but also raise buyer expectations.
-- App pricing power now depends on workflow lock-in and distribution.
+- Lower model costs help builders, but remove excuses for inefficient apps.
+- Differentiation shifts toward workflow ownership + distribution.
 
 **What we do**
-- Stay model-portable and cost-aware.
-- Track trend signals and delivery outcomes together.
-- Package repeatable workflows, not isolated tools.
+- Keep model-portable architecture.
+- Track trend signals together with delivery metrics.
+- Prioritize reusable workflows over one-off features.
 
 ---
 
-### 🚨 Signal #3: Infrastructure momentum stays ahead of app-layer confidence
+### 🚨 Signal #3: Infra momentum still outpaces app-layer confidence
 
 **Why it matters**
-- Continued infra confidence supports long-term AI buildout.
-- App-layer teams still need clear value capture to avoid compression.
+- AI infrastructure strength supports long-term platform growth.
+- App-layer products must prove margin durability and user retention.
 
 **What we do**
-- Focus on practical operator workflows with visible time savings.
-- Keep cycles short: signal scan → execution → publish.
-- Maintain twice-weekly trend refresh cadence.
+- Continue practical operator workflows on OpenClaw + dedicated Mac execution.
+- Keep cadence: daily signal scan + twice-weekly trend synthesis.
+- Convert trends into explicit build decisions, not commentary alone.
 
 ---
 
 ## Prior memos
 
+- Memo #4 (Mar 13): quality filter, cost pressure, infra support
 - Memo #3 (Mar 4): persistent SaaS pressure, model economics, infra durability
 - Memo #2 (Mar 3): valuation discipline, model economics, resilient infra demand
 - Memo #1 (Mar 2): SaaS uncertainty, infra-heavy capex, mixed macro tape, semis as proxy
