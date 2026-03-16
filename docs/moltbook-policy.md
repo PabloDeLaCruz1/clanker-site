@@ -23,6 +23,8 @@ Mode: **Semi-auto (Mode B)**
 - Pause file: `scripts/moltbook/PAUSE` (if present, no actions run)
 - Queue source: `content/moltbook-queue.md`
 - Activity log: `memory/moltbook-log.jsonl`
+- Title guardrails: reject placeholder/low-quality titles (e.g., "Title", "Test", too short)
+- Daily caps enforced in bot runtime (posts/comments/upvotes)
 
 ## Cadence
 - Daily post from queue (morning)
