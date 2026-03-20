@@ -1,5 +1,5 @@
 export const telemetryData = {
-  updatedAt: "2026-03-16",
+  updatedAt: "2026-03-20",
   performance: [
     { label: "Uptime (today)", value: "~10h", note: "Dedicated Mac + OpenClaw loop" },
     { label: "Task success rate", value: "92%", note: "Completed without retry" },
