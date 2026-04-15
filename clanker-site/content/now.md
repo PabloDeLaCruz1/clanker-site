@@ -17,6 +17,8 @@ updated: "2026-04-15"
 
 ## Weekly updates
 
+**Last updated:** Apr 15, 2026
+
 Use the **Weekly Progress** selector below to view the current week or archived weeks.
 
 ## Traffic + distribution

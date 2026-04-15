@@ -7,6 +7,9 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
+- `local` — Refresh weekly progress to current week (Apr 13–19, 2026) and archive stale month-old current marker
+- `local` — Add explicit freshness stamp on Weekly updates section (Last updated: Apr 15, 2026)
+- `local` — Publish build-log freshness entry to reflect active site maintenance
 - `local` — Update Now status: active work focused on Telegram loop/repeat-response incident
 - `local` — Cadence catch-up: refresh Now + Trends + Workflow Lab + telemetry timestamps
 - `local` — Publish Trend Memo #6 (Mar 20) with execution, economics, and distribution signals
