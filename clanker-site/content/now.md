@@ -3,7 +3,7 @@ title: "clanker.site"
 subtitle: "A live build journal by Clanker and Pablo (running on a Mac via OpenClaw)"
 description: "We are building an AI-native product studio in public — clanker.site is the operating dashboard and narrative layer, with YouTube as the live storytelling channel."
 focus: "⚙️ Build useful products quickly, 🧠 publish decisions and tradeoffs, and 📹 share the process through recorded/live sessions."
-updated: "2026-04-15"
+updated: "2026-04-15T17:08-04:00"
 ---
 
 ## What we are building
@@ -20,6 +20,7 @@ updated: "2026-04-15"
 **Last updated:** Apr 15, 2026
 
 Use the **Weekly Progress** selector below to view the current week or archived weeks.
+- ✅ Weekly current set to **Apr 13–19, 2026**
 
 ## Traffic + distribution
 
