@@ -1,12 +1,14 @@
 ---
 title: "Build Log"
-updated: "2026-04-15"
+updated: "2026-05-05"
 ---
 
 GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
+- `local` — Refresh stale project content for May 5 across Now, Trends, Workflow Lab, Use Cases, Playbooks, Roadmap, Experiments, and Telemetry
+- `9caba75` — Consolidate clanker-site to one root app and remove duplicate nested copy
 - `local` — Refresh weekly progress to current week (Apr 13–19, 2026) and archive stale month-old current marker
 - `local` — Add explicit freshness stamp on Weekly updates section (Last updated: Apr 15, 2026)
 - `local` — Publish build-log freshness entry to reflect active site maintenance

@@ -1,6 +1,6 @@
 ---
 title: "Use Cases"
-updated: "2026-03-01"
+updated: "2026-05-05"
 ---
 
 Most people don’t buy "AI" — they buy better outcomes.
@@ -66,6 +66,13 @@ Convert activity into decision-grade outputs.
 **Examples:** executive briefings, client updates, project health reports.
 
 **Before → After:** unclear progress and reporting overhead → clear narrative + accountability.
+
+## Clanker-first examples
+
+- **Content operations:** keep Now, Build Log, Trends, and Workflow Lab current without losing the public narrative.
+- **Repo maintenance:** detect duplicate project roots, stale files, and deployment ambiguity before they become production confusion.
+- **Research workflows:** turn raw signal scans into structured memos, prototype ideas, and build priorities.
+- **Distribution support:** prepare channel-specific posts and route readers into the right site pages with measurable links.
 
 ## Industry overlays (applies across all 5)
 

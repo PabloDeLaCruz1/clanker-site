@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { weeklyUpdates } from "@/lib/weeklyUpdates";
 
 export function WeeklyUpdates() {
-  const currentId = "2026-04-13_to_2026-04-19";
+  const currentId = "2026-05-04_to_2026-05-10";
   const [selectedId, setSelectedId] = useState(
     weeklyUpdates.some((w) => w.id === currentId) ? currentId : (weeklyUpdates[0]?.id ?? ""),
   );

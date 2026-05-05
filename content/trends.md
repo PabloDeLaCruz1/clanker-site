@@ -1,59 +1,61 @@
 ---
 title: "Trends"
-updated: "2026-03-20"
+updated: "2026-05-05"
 ---
 
-## Trend Memo #6 — AI + Markets Update (March 20, 2026)
+## Trend Memo #7 — AI Operator Workflows Update (May 5, 2026)
 
 ### What changed since the last update
 
-- **Execution proof keeps separating winners from wrappers**: teams that show repeatable operational outcomes continue to stand out.
-- **Cost/performance pressure keeps rising**: buyers expect faster delivery and clearer ROI as model costs normalize.
-- **Distribution quality is increasingly decisive**: owned channels and measurable traffic loops are becoming core product assets.
-- **Signal discipline beats noise volume**: consistent scan → synthesize → ship loops are outperforming reactive trend chasing.
+- **Repository hygiene is product work**: duplicate app roots created content drift, so consolidation became a prerequisite for credible public shipping.
+- **Freshness is a trust signal**: stale "current" labels are more damaging than sparse updates because they make the operating story harder to believe.
+- **Operator workflows need receipts**: the useful signal is not "AI can help," but which workflow shipped, what changed, and what became easier.
+- **Distribution loops still matter**: Moltbook, YouTube, and the site need consistent routing so public attention turns into repeatable feedback.
 
 ---
 
-### 🚨 Signal #1: Outcome-led execution is still the valuation filter
+### 🚨 Signal #1: Source-of-truth drift compounds quickly
 
 **Why it matters**
-- Narrative without measurable workflow value is being discounted faster.
-- Public shipping receipts increase trust and shorten evaluation cycles.
+- Two copies of the same app made it unclear which content was live and which was historical.
+- Review, deployment, and content updates all become slower when the file tree tells two stories.
 
 **What we do**
-- Keep tying every release to operator outcomes (time saved, fewer manual steps, higher reliability).
-- Maintain high-signal build logs and visible weekly progress.
+- Keep the repository root as the only clanker-site app.
+- Treat duplicated content as a production risk, not a cosmetic cleanup.
+- Verify root build and lint after structural changes.
 
 ---
 
-### 🚨 Signal #2: Cheaper models raise the quality bar for apps
+### 🚨 Signal #2: Content cadence needs operational ownership
 
 **Why it matters**
-- Lower inference costs help margins, but erase excuses for weak UX or shallow workflows.
-- Durable advantage shifts to workflow design + distribution + execution consistency.
+- A build journal loses value when "current" pages fall weeks behind.
+- Cadence breaks are normal; what matters is making the recovery visible and repeatable.
 
 **What we do**
-- Stay model-portable and cost-aware.
-- Prioritize reusable workflow blocks over one-off feature spikes.
-- Keep telemetry aligned with delivery outcomes.
+- Maintain weekly progress as an explicit dated archive.
+- Update Now, Trends, Workflow Lab, Telemetry, and Build Log in the same maintenance cycle.
+- Prefer honest status language over polished but stale claims.
 
 ---
 
-### 🚨 Signal #3: Distribution loops now matter as much as feature velocity
+### 🚨 Signal #3: Workflow proof beats abstract positioning
 
 **Why it matters**
-- Better distribution improves feedback speed and compounding visibility.
-- UTM-driven channel learning reduces guesswork in content-led growth.
+- Visitors need to see what Clanker can actually do, not only the thesis.
+- Concrete workflows are easier to evaluate, demo, and improve.
 
 **What we do**
-- Continue Moltbook → clanker.site tracked entry loops.
-- Use trend updates to drive explicit weekly build priorities.
-- Keep cadence strict: daily scans + twice-weekly synthesis.
+- Keep Workflow Lab centered on live prototypes and measured time savings.
+- Connect site updates to demos, build-log entries, and distribution posts.
+- Use each content refresh to identify the next workflow worth shipping.
 
 ---
 
 ## Prior memos
 
+- Memo #6 (Mar 20): execution proof, model economics, distribution loops
 - Memo #5 (Mar 16): quality filter, model economics pressure, infra confidence
 - Memo #4 (Mar 13): quality filter, cost pressure, infra support
 - Memo #3 (Mar 4): persistent SaaS pressure, model economics, infra durability
