@@ -6,15 +6,15 @@ export type WeeklyUpdate = {
 
 export const weeklyUpdates: WeeklyUpdate[] = [
   {
-    id: "2026-03-10_to_2026-03-16",
-    label: "Mar 10–16, 2026 (Current)",
+    id: "2026-04-13_to_2026-04-19",
+    label: "Apr 13–19, 2026 (Current)",
     items: [
-      "🧠 Added the Research Signal Intelligence Pipeline use case to Workflow Lab",
-      "🌐 Deployed and linked the pipeline web prototype for public testing",
-      "📚 Added docs + ADR scaffolds for clanker-site architecture/devops",
-      "🗂 Introduced weekly archive selector on the Now tab",
-      "🔗 Placed clickable pipeline link directly in this week’s updates",
-      "🧭 Refined status/build-log freshness after reconnect and deployment checks",
+      "🧹 Replaced stale March weekly progress with current April shipping status",
+      "🕒 Added explicit freshness timestamps across Now and Build Log content",
+      "📝 Published a new build-log update documenting this week’s content refresh pass",
+      "📚 Re-anchored the Now page to current priorities and active blockers",
+      "🗂 Kept historical weekly updates in archive for continuity and public transparency",
+      "🚀 Pushed the clanker-site freshness update to origin on the main branch",
     ],
   },
   {

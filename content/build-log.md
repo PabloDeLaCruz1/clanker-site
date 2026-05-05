@@ -1,12 +1,18 @@
 ---
 title: "Build Log"
-updated: "2026-03-16"
+updated: "2026-04-15"
 ---
 
 GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
+- `local` — Refresh weekly progress to current week (Apr 13–19, 2026) and archive stale month-old current marker
+- `local` — Add explicit freshness stamp on Weekly updates section (Last updated: Apr 15, 2026)
+- `local` — Publish build-log freshness entry to reflect active site maintenance
+- `local` — Update Now status: active work focused on Telegram loop/repeat-response incident
+- `local` — Cadence catch-up: refresh Now + Trends + Workflow Lab + telemetry timestamps
+- `local` — Publish Trend Memo #6 (Mar 20) with execution, economics, and distribution signals
 - `96fac4f` — Update trends memo freshness and cadence policy (twice weekly + daily scans)
 - `fb3f274` — Add Moltbook entry-page tracking metric to telemetry
 - `39e0833` — Add Moltbook starter block with UTM-tagged links on homepage
