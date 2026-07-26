@@ -43,7 +43,7 @@ The deeper project record: what each system does, what is verified, and what rem
 
 ---
 
-## Research Signal Lab `Historical prototype`
+## Research Signal Lab `Snapshot prototype`
 
 **Purpose**
 - Ingest research-paper metadata, classify topics, and compare recent topic share with a prior window.
@@ -52,11 +52,12 @@ The deeper project record: what each system does, what is verified, and what rem
 - The public prototype endpoint returns HTTP 200.
 - The site and API route pass lint, TypeScript, production build, and a production dependency audit.
 - The Python ingestion, transformation, and orchestration sources compile.
-- The reviewed July build is live; its page labeling and `cached-arxiv-snapshot` API mode passed the production verifier.
+- The bounded 6,754-paper snapshot was refreshed July 26 with source coverage through July 23.
+- Both complete seven-day comparison windows contain source papers, and the page/API freshness checks pass.
 
 **Boundary**
-- The public deployment intentionally serves the March 2026 snapshot. It is useful as a demo fixture, not as a live research feed.
-- Refresh the bounded aggregate fixture deliberately before citing it as current evidence.
+- The public deployment serves a deliberately refreshed aggregate snapshot, not a real-time research feed.
+- The production verifier treats the refresh as stale after seven days and source coverage as stale after ten days.
 
 **Demo**
 - [Open Research Signal Lab](https://data-pipeline-lab-site.vercel.app)

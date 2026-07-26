@@ -66,9 +66,11 @@ The verifier accepts URL overrides for previews:
 - `RESEARCH_SITE_URL`
 - `INTAKE_SITE_URL`
 
-The research checks require the `Historical Prototype` page label and the
-`cached-arxiv-snapshot` API mode. The intake check requires the revival deployment marker. These
-markers distinguish the reviewed source from the older public builds.
+The research checks require the `Refreshed Snapshot` page label, the
+`cached-arxiv-snapshot` API mode, a refresh no older than seven days, source coverage no older than
+ten days, a sample of at least 1,000 papers, and populated comparison windows. The intake check
+requires the revival deployment marker. These checks distinguish reviewed, current source data from
+an older public build.
 
 ## Retiring a prototype
 

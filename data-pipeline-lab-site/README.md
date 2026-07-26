@@ -1,8 +1,8 @@
 # Research Signal Lab
 
-A historical web prototype for exploring arXiv keyword acceleration and topic momentum.
+A bounded research-snapshot prototype for exploring arXiv keyword acceleration and topic momentum.
 
-The app intentionally serves a dated, checked-in aggregate snapshot. It is not a real-time data product. Raw paper abstracts are excluded from the web repository; the bounded fixture contains only summary rows and chart series.
+The app serves a checked-in aggregate snapshot that can be refreshed deliberately from the arXiv API. It is not a real-time data product. Raw paper abstracts are excluded from the web repository; the bounded fixture contains only summary rows and chart series.
 
 ## Local development
 

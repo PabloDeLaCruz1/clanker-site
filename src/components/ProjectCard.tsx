@@ -5,6 +5,7 @@ const statusClass: Record<Project["status"], string> = {
   Live: "status-live",
   Reviving: "status-reviving",
   "Live prototype": "status-live",
+  "Snapshot prototype": "status-live",
   "Historical prototype": "status-local",
 };
 

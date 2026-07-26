@@ -49,13 +49,32 @@ async function verifyResearchApi() {
   const url = `${urls.research}/api/signals`;
   const response = await request(url);
   const body = await response.json();
+  const refreshedAt = Date.parse(body.updatedAt);
+  const sourceThrough = Date.parse(body.sourceThrough);
+  const now = Date.now();
 
   if (body.mode !== "cached-arxiv-snapshot") {
     throw new Error(`unexpected mode: ${body.mode ?? "missing"}`);
   }
 
-  if (!body.note?.includes("Historical research snapshot")) {
-    throw new Error("historical snapshot note is missing");
+  if (!body.note?.includes("Bounded arXiv snapshot")) {
+    throw new Error("bounded snapshot note is missing");
+  }
+
+  if (!Number.isFinite(refreshedAt) || now - refreshedAt > 7 * 24 * 60 * 60 * 1000) {
+    throw new Error(`snapshot refresh is stale or invalid: ${body.updatedAt ?? "missing"}`);
+  }
+
+  if (!Number.isFinite(sourceThrough) || now - sourceThrough > 10 * 24 * 60 * 60 * 1000) {
+    throw new Error(`source coverage is stale or invalid: ${body.sourceThrough ?? "missing"}`);
+  }
+
+  if (!Number.isInteger(body.sampleSize) || body.sampleSize < 1000) {
+    throw new Error(`bounded sample is unexpectedly small: ${body.sampleSize ?? "missing"}`);
+  }
+
+  if (!body.windows?.papers7d || !body.windows?.papersPrev7d) {
+    throw new Error("both seven-day comparison windows must contain papers");
   }
 
   return `Research Signal API: ${url}`;
@@ -70,8 +89,8 @@ const rootChecks = [
 const prototypeChecks = [
   () =>
     verifyPage("Research Signal Lab", `${urls.research}/`, [
-      "Historical Prototype",
-      "dated, reviewable snapshot",
+      "Refreshed Snapshot",
+      "bounded, reviewable snapshot",
     ]),
   verifyResearchApi,
   () =>
