@@ -7,6 +7,8 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
+- `Vercel` — Deploy the reviewed Research Signal Lab and Workflow Client Intake builds to their original production URLs; verify all six public page and API checks
+- `472c684` — Merge deployment ownership, smoke checks, and supported GitHub Action runtimes; pass all five post-merge CI jobs and deploy the primary site
 - `d36ffdb` — Publish the verified revival status; pass five post-merge CI jobs and deploy the corrected production content
 - `e895315` — Merge the revival baseline to `main`; pass five CI jobs and complete the primary Vercel production deployment
 - `032b40d` — Patch framework security, add CI and focused tests, archive obsolete operator configuration, compact the research fixture, and reframe Clanker as an evidence-backed AI engineering lab

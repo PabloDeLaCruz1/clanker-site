@@ -1,6 +1,6 @@
 # Clanker Site Revival Plan
 
-Status: primary revival shipped; prototype deployment handoff operationalized
+Status: application revival complete; branch protection pending repository admin
 Owner: Pablo + Codex
 Started: 2026-07-25
 
@@ -45,7 +45,7 @@ OpenClaw should become historical implementation context, not a current capabili
 
 ## Current state
 
-Milestones 1–3 and the primary-app portion of milestone 4 are complete. PR #1 merged as `e895315`; all five post-merge CI jobs passed; Vercel reported a successful production deployment; and the refreshed primary routes were verified over HTTP. PR #2 merged as `d36ffdb`, its five post-merge CI jobs passed, and the corrected release status was verified in production. The prototype source is healthy in CI, but its two older Vercel projects require account-level reconnection. Branch protection also requires an administrator on the original GitHub account.
+All four revival milestones are complete. PRs #1–3 merged through `472c684`; each post-merge run passed all five CI jobs; and the primary Vercel deployments were verified. The Research Signal Lab and Workflow Client Intake projects were then deployed from the reviewed source to their original production URLs. Their page, API, and deployment markers passed the repository-wide production verifier. Branch protection remains an account-level follow-up because the current maintainer role is Write rather than Admin.
 
 ## Milestones
 
@@ -86,7 +86,7 @@ Exit: active code has a clear owner and test path; historical material cannot be
 
 ### 4. Relaunch and operate
 
-Status: primary app complete; prototype reconnection runbook ready
+Status: complete
 
 - Complete responsive, accessibility, metadata, and social-card QA.
 - Verify Vercel project ownership, environment, analytics, and deployment settings.
@@ -110,3 +110,5 @@ Exit: the refreshed site is live, monitored, and documented.
 - 2026-07-26: Record the research and intake Vercel projects as separate deployment follow-ups rather than implying they updated with the root app.
 - 2026-07-26: Merge PR #2 as `d36ffdb`; verify five post-merge CI jobs, the Vercel production deployment, and corrected public status copy.
 - 2026-07-26: Add deterministic deployment markers, production smoke checks, and an exact Vercel reconnection/retirement runbook for the two independently hosted prototypes.
+- 2026-07-26: Merge PR #3 as `472c684`; pass all five post-merge CI jobs and deploy the primary site with supported Node 24 GitHub Action runtimes.
+- 2026-07-26: Authenticate the owning Vercel account, link both existing prototype projects, deploy the reviewed source, and verify all production freshness checks.

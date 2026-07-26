@@ -17,7 +17,7 @@ export const weeklyUpdates: WeeklyUpdate[] = [
       "Compacted the checked-in research cache from 3 MB of raw abstracts to a 14 KB aggregate fixture",
       "Added focused tests for content metadata, project records, and RSS normalization",
       "Merged the revival baseline, passed all five GitHub Actions jobs, and verified the primary Vercel deployment",
-      "Recorded the separate prototype deployments as follow-up instead of implying they updated with the root app",
+      "Deployed both independently hosted prototypes from the reviewed source and verified their production freshness markers",
     ],
   },
   {

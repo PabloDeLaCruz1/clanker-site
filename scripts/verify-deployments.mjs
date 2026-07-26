@@ -71,7 +71,7 @@ const prototypeChecks = [
   () =>
     verifyPage("Research Signal Lab", `${urls.research}/`, [
       "Historical Prototype",
-      "Dated snapshot",
+      "dated, reviewable snapshot",
     ]),
   verifyResearchApi,
   () =>

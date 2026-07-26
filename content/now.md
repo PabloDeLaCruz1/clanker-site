@@ -15,8 +15,8 @@ AI claims are easy to publish. Working systems, clear boundaries, and repeatable
 
 - **Foundation:** dependency security, clean installs, focused tests, and repository-wide CI are live.
 - **Product:** the evidence-backed project experience is running in production.
-- **Operations:** merge commit `e895315` passed all five CI jobs and its Vercel production deployment was verified.
-- **Next:** reconcile the separately hosted prototype deployments, decide their long-term repository boundaries, and add branch protection.
+- **Operations:** merge commit `472c684` passed all five CI jobs, the primary deployment succeeded, and both independently hosted prototypes passed their production freshness checks.
+- **Next:** turn the verified prototypes into durable case studies, decide their long-term repository boundaries, and add branch protection.
 
 ## How work is presented
 
