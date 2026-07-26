@@ -99,7 +99,7 @@ Exit: the refreshed site is live, monitored, and documented.
 
 - 2026-07-25: Preserve existing live deployments during the foundation pass.
 - 2026-07-25: Treat the repository root as the app of record.
-- 2026-07-25: Archive OpenClaw operating instructions instead of deleting history.
+- 2026-07-25: Archive OpenClaw operating instructions under a non-operative filename instead of deleting history.
 - 2026-07-25: Use tested PostCSS and Sharp overrides to clear production advisories; do not use npm's unsafe force-fix downgrade.
 - 2026-07-25: Recommend an AI engineering lab positioning; final copy remains a product decision.
 - 2026-07-26: Archive the OpenClaw identity, memory, Moltbook, Telegram-era automation, and uploader material under `docs/archive/openclaw/legacy/`.
