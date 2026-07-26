@@ -3,7 +3,7 @@ export type Project = {
   description: string;
   evidence: string;
   stack: string[];
-  status: "Reviving" | "Live prototype" | "Historical prototype";
+  status: "Live" | "Reviving" | "Live prototype" | "Historical prototype";
   href: string;
   external?: boolean;
 };
@@ -13,18 +13,18 @@ export const projects: Project[] = [
     title: "Clanker Site",
     description:
       "A proof-driven engineering journal for shipped AI systems, data products, and the decisions behind them.",
-    evidence: "Secure revival baseline verified July 26, 2026",
+    evidence: "Merge, five CI jobs, and production deployment verified July 26, 2026",
     stack: ["Next.js", "TypeScript", "Vercel"],
-    status: "Reviving",
+    status: "Live",
     href: "/build-log",
   },
   {
     title: "Research Signal Lab",
     description:
-      "An end-to-end prototype that ingests research metadata, scores topic acceleration, and serves a reviewable signal dashboard.",
-    evidence: "Live endpoint verified; cached research snapshot is historical",
+      "A dated research-signal demo that scores topic acceleration and preserves its March snapshot as inspectable historical evidence.",
+    evidence: "Endpoint reachable; separate deployment still serves the historical March snapshot",
     stack: ["Python", "dbt", "PostgreSQL", "Next.js"],
-    status: "Live prototype",
+    status: "Historical prototype",
     href: "https://data-pipeline-lab-site.vercel.app",
     external: true,
   },
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     title: "Workflow Client Intake",
     description:
       "A focused interface that turns an unstructured request into a scoped automation brief and implementation plan.",
-    evidence: "Live prototype endpoint verified July 25, 2026",
+    evidence: "Endpoint reachable; repository dependency refresh passed CI July 26, 2026",
     stack: ["Next.js", "TypeScript", "Product design"],
     status: "Live prototype",
     href: "https://workflow-client-intake.vercel.app",

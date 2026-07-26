@@ -2,8 +2,8 @@
 title: "AI systems that earn their place."
 subtitle: "Clanker · Pablo De La Cruz · AI engineering lab"
 description: "Practical AI systems, data products, and developer tools—built with the evidence, constraints, and tradeoffs left visible."
-focus: "Turning a stale agent-era project into a secure, evidence-backed product workspace."
-status: "Revival baseline ready"
+focus: "Operating the revived workspace and turning verified prototypes into durable case studies."
+status: "Revival shipped"
 updated: "July 26, 2026"
 ---
 
@@ -13,10 +13,10 @@ AI claims are easy to publish. Working systems, clear boundaries, and repeatable
 
 ## Work in progress
 
-- **Foundation:** dependency security, clean installs, tests, and local verification are complete.
-- **Product:** the site is reframed around projects, boundaries, and engineering evidence.
-- **Operations:** CI is prepared on the revival branch; production remains unchanged until review.
-- **Next:** review the branch, publish it intentionally, and verify the deployment.
+- **Foundation:** dependency security, clean installs, focused tests, and repository-wide CI are live.
+- **Product:** the evidence-backed project experience is running in production.
+- **Operations:** merge commit `e895315` passed all five CI jobs and its Vercel production deployment was verified.
+- **Next:** reconcile the separately hosted prototype deployments, decide their long-term repository boundaries, and add branch protection.
 
 ## How work is presented
 

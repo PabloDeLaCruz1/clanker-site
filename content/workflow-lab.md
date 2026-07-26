@@ -5,18 +5,19 @@ updated: "2026-07-25"
 
 The deeper project record: what each system does, what is verified, and what remains unfinished.
 
-## Clanker Site `Reviving`
+## Clanker Site `Live`
 
 **Purpose**
 - Make Pablo's AI, data, and developer-tool work inspectable in one place.
 
 **Verified**
 - The public endpoint returns HTTP 200.
-- The root app passes lint, TypeScript, production build, and a production dependency audit.
+- Merge commit `e895315` passed tests, lint, TypeScript, production build, and the production dependency audit in CI.
+- Vercel completed the production deployment, and the refreshed homepage, project index, and build log were verified live.
 - The repository has one app of record and a documented revival plan.
 
-**In progress**
-- Product reframe, visual QA, CI publication, and deployment verification.
+**Next**
+- Operate the site from verified evidence and keep prototype deployment status explicit.
 
 **Stack**
 - Next.js, TypeScript, Tailwind CSS, Vercel
@@ -34,13 +35,14 @@ The deeper project record: what each system does, what is verified, and what rem
 
 **Boundary**
 - It demonstrates the intake interaction; it is not presented as a production CRM or persistent client system.
+- Its separate Vercel deployment predates the July dependency refresh; the repository version is verified by CI.
 
 **Demo**
 - [Open Workflow Client Intake](https://workflow-client-intake.vercel.app)
 
 ---
 
-## Research Signal Lab `Live prototype · historical snapshot`
+## Research Signal Lab `Historical prototype`
 
 **Purpose**
 - Ingest research-paper metadata, classify topics, and compare recent topic share with a prior window.
@@ -51,7 +53,8 @@ The deeper project record: what each system does, what is verified, and what rem
 - The Python ingestion, transformation, and orchestration sources compile.
 
 **Boundary**
-- The checked-in cache was generated in March 2026. It is useful as a demo fixture, not as a live research feed.
+- The public deployment still serves the March 2026 snapshot. It is useful as a demo fixture, not as a live research feed.
+- The repository contains the compact aggregate fixture and corrected historical labeling; the separate Vercel project still needs redeployment or retirement.
 
 **Demo**
 - [Open Research Signal Lab](https://data-pipeline-lab-site.vercel.app)

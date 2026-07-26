@@ -1,6 +1,6 @@
 # Clanker Site Revival Plan
 
-Status: revival baseline ready for review
+Status: primary revival shipped; prototype deployment follow-up documented
 Owner: Pablo + Codex
 Started: 2026-07-25
 
@@ -45,13 +45,13 @@ OpenClaw should become historical implementation context, not a current capabili
 
 ## Current state
 
-Milestones 1–3 and the local QA portion of milestone 4 are complete on `codex/revive-clanker-site`. Merge, branch-protection changes, and post-deploy verification remain intentionally pending because they change the default branch or production environment.
+Milestones 1–3 and the primary-app portion of milestone 4 are complete. PR #1 merged as `e895315`; all five post-merge CI jobs passed; Vercel reported a successful production deployment; and the refreshed primary routes were verified over HTTP. Branch protection and the separately hosted prototype deployments remain operating follow-ups.
 
 ## Milestones
 
 ### 1. Stabilize the foundation
 
-Status: complete locally
+Status: complete locally and in CI
 
 - Patch vulnerable framework dependencies.
 - Add type-check scripts and repository-wide CI.
@@ -63,7 +63,7 @@ Exit: clean installs, production audits, lint, type checks, and production build
 
 ### 2. Reframe the product
 
-Status: complete locally
+Status: complete and live on the primary site
 
 - Rewrite the homepage around the AI engineering lab direction.
 - Replace stale OpenClaw/Moltbook status with a dated transition note.
@@ -86,7 +86,7 @@ Exit: active code has a clear owner and test path; historical material cannot be
 
 ### 4. Relaunch and operate
 
-Status: local QA complete; remote publication and production verification pending
+Status: primary app complete; separate prototype deployments pending
 
 - Complete responsive, accessibility, metadata, and social-card QA.
 - Verify Vercel project ownership, environment, analytics, and deployment settings.
@@ -106,3 +106,5 @@ Exit: the refreshed site is live, monitored, and documented.
 - 2026-07-26: Keep the prototype apps independently installable instead of introducing npm workspaces during the revival baseline.
 - 2026-07-26: Replace the 3 MB raw-paper research cache with a 14 KB aggregate snapshot and label the demo historical.
 - 2026-07-26: Add focused tests for content metadata, project records, and RSS normalization.
+- 2026-07-26: Merge PR #1 as `e895315`; verify five successful CI jobs and the primary Vercel production deployment.
+- 2026-07-26: Record the research and intake Vercel projects as separate deployment follow-ups rather than implying they updated with the root app.
