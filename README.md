@@ -12,11 +12,11 @@ The project has been revived from its original OpenClaw-era setup. The primary N
 
 - Primary app: repository root
 - Production: https://clanker-site.vercel.app
-- Revival branch: `codex/revive-clanker-site`
-- Required checks: lint, TypeScript, production build
-- CI: GitHub Actions
+- Production commit: `e895315`
+- Required checks: tests, lint, TypeScript, production build, production dependency audit
+- CI: [GitHub Actions](https://github.com/PabloDeLaCruz1/clanker-site/actions)
 
-The revival branch contains the new product narrative, security upgrades, CI, focused tests, and the historical archive. Production remains unchanged until the reviewed branch is intentionally merged and deployed.
+The revival baseline was merged on July 26, 2026. The post-merge CI run passed all five jobs, and the primary Vercel deployment was verified from the merge commit. The separately hosted prototype projects remain explicit follow-up work.
 
 ## Workspace
 
