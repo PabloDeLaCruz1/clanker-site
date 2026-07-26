@@ -12,11 +12,11 @@ The project has been revived from its original OpenClaw-era setup. The primary N
 
 - Primary app: repository root
 - Production: https://clanker-site.vercel.app
-- Production commit: `e895315`
+- Production commit: `d36ffdb`
 - Required checks: tests, lint, TypeScript, production build, production dependency audit
 - CI: [GitHub Actions](https://github.com/PabloDeLaCruz1/clanker-site/actions)
 
-The revival baseline was merged on July 26, 2026. The post-merge CI run passed all five jobs, and the primary Vercel deployment was verified from the merge commit. The separately hosted prototype projects remain explicit follow-up work.
+The revival baseline was merged on July 26, 2026. Both revival pull requests passed all five post-merge CI jobs, and the primary Vercel deployments were verified from their merge commits. The separately hosted prototype projects have an explicit reconnection and verification runbook in [`docs/DEPLOYMENT_RUNBOOK.md`](docs/DEPLOYMENT_RUNBOOK.md).
 
 ## Workspace
 
@@ -95,6 +95,10 @@ Primary content files:
 3. Open a pull request and wait for CI.
 4. Merge to `main`.
 5. Verify the Vercel deployment and key routes.
+
+Use `npm run verify:production` for the root app. The independently deployed prototypes use
+`npm run verify:prototypes`; their ownership and Vercel root-directory settings are documented in
+[`docs/DEPLOYMENT_RUNBOOK.md`](docs/DEPLOYMENT_RUNBOOK.md).
 
 ## Shipping discipline
 

@@ -7,6 +7,7 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
+- `d36ffdb` — Publish the verified revival status; pass five post-merge CI jobs and deploy the corrected production content
 - `e895315` — Merge the revival baseline to `main`; pass five CI jobs and complete the primary Vercel production deployment
 - `032b40d` — Patch framework security, add CI and focused tests, archive obsolete operator configuration, compact the research fixture, and reframe Clanker as an evidence-backed AI engineering lab
 - `local` — Refresh stale project content for May 5 across Now, Trends, Workflow Lab, Use Cases, Playbooks, Roadmap, Experiments, and Telemetry

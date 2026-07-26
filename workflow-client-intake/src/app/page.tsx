@@ -138,9 +138,18 @@ export default function Home() {
     "mt-1 w-full rounded-lg border border-black/15 bg-white p-2.5 text-sm text-black outline-none focus:border-black/40";
 
   return (
-    <main className="mx-auto max-w-5xl px-6 py-10">
+    <main
+      className="mx-auto max-w-5xl px-6 py-10"
+      data-deployment-marker="intake-revival-2026-07-26"
+    >
+      <p className="mb-3 text-xs font-medium uppercase tracking-[0.18em] text-black/55">
+        Prototype · local-only processing
+      </p>
       <h1 className="text-3xl font-bold">Workflow Client Intake (v0)</h1>
-      <p className="mt-2 text-black/70">Capture → Decide → Execute demo form with validation and normalized output.</p>
+      <p className="mt-2 text-black/70">
+        Capture → Decide → Execute demo form with validation and normalized output. Nothing entered
+        here is transmitted or stored.
+      </p>
 
       <div className="mt-8 grid gap-8 lg:grid-cols-2">
         <form onSubmit={onSubmit} className="space-y-4 rounded-xl border border-black/10 p-5">
