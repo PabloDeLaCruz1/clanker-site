@@ -12,7 +12,7 @@ The deeper project record: what each system does, what is verified, and what rem
 
 **Verified**
 - The public endpoint returns HTTP 200.
-- Merge commit `e895315` passed tests, lint, TypeScript, production build, and the production dependency audit in CI.
+- Merge commit `472c684` passed tests, lint, TypeScript, production build, and the production dependency audit in CI.
 - Vercel completed the production deployment, and the refreshed homepage, project index, and build log were verified live.
 - The repository has one app of record and a documented revival plan.
 
@@ -32,10 +32,11 @@ The deeper project record: what each system does, what is verified, and what rem
 **Verified**
 - The public prototype endpoint returns HTTP 200.
 - The app passes lint, TypeScript, production build, and a production dependency audit.
+- The reviewed July build is live, and its deterministic deployment marker passed the production verifier.
 
 **Boundary**
 - It demonstrates the intake interaction; it is not presented as a production CRM or persistent client system.
-- Its separate Vercel deployment predates the July dependency refresh; the repository version is verified by CI.
+- Form processing remains local to the browser; the demo does not transmit or persist submissions.
 
 **Demo**
 - [Open Workflow Client Intake](https://workflow-client-intake.vercel.app)
@@ -51,10 +52,11 @@ The deeper project record: what each system does, what is verified, and what rem
 - The public prototype endpoint returns HTTP 200.
 - The site and API route pass lint, TypeScript, production build, and a production dependency audit.
 - The Python ingestion, transformation, and orchestration sources compile.
+- The reviewed July build is live; its page labeling and `cached-arxiv-snapshot` API mode passed the production verifier.
 
 **Boundary**
-- The public deployment still serves the March 2026 snapshot. It is useful as a demo fixture, not as a live research feed.
-- The repository contains the compact aggregate fixture and corrected historical labeling; the separate Vercel project still needs redeployment or retirement.
+- The public deployment intentionally serves the March 2026 snapshot. It is useful as a demo fixture, not as a live research feed.
+- Refresh the bounded aggregate fixture deliberately before citing it as current evidence.
 
 **Demo**
 - [Open Research Signal Lab](https://data-pipeline-lab-site.vercel.app)

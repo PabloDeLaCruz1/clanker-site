@@ -12,13 +12,13 @@ updated: "2026-07-26"
 - The research fixture is compact and explicitly labeled as historical
 - Merge commit `e895315` passed all five CI jobs and deployed successfully to the primary Vercel project
 
-## Next — close the prototype deployment gap
+## Shipped — prototype deployment recovery
 
-- Redeploy or retire the separately hosted research-signal prototype
-- Redeploy the client-intake prototype from the verified dependency baseline
-- Confirm ownership and deployment settings for both prototype Vercel projects
+- Deployed the reviewed research-signal source to its original production project
+- Deployed the reviewed client-intake source to its original production project
+- Verified the historical-data label, snapshot API mode, and intake revival marker over HTTP
 
-## Then — operate deliberately
+## Next — operate deliberately
 
 - Decide whether each prototype stays in this repository or moves to its own home
 - Add branch protection now that the checks have proved stable on `main`

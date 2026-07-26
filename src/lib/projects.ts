@@ -22,7 +22,7 @@ export const projects: Project[] = [
     title: "Research Signal Lab",
     description:
       "A dated research-signal demo that scores topic acceleration and preserves its March snapshot as inspectable historical evidence.",
-    evidence: "Endpoint reachable; separate deployment still serves the historical March snapshot",
+    evidence: "Reviewed deployment, historical label, and snapshot API verified July 26, 2026",
     stack: ["Python", "dbt", "PostgreSQL", "Next.js"],
     status: "Historical prototype",
     href: "https://data-pipeline-lab-site.vercel.app",
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     title: "Workflow Client Intake",
     description:
       "A focused interface that turns an unstructured request into a scoped automation brief and implementation plan.",
-    evidence: "Endpoint reachable; repository dependency refresh passed CI July 26, 2026",
+    evidence: "Reviewed deployment and local-only intake marker verified July 26, 2026",
     stack: ["Next.js", "TypeScript", "Product design"],
     status: "Live prototype",
     href: "https://workflow-client-intake.vercel.app",
