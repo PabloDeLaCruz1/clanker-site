@@ -12,6 +12,7 @@ export function FluidBackground() {
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const pointer: Pointer = { x: 0.5, y: 0.5, tx: 0.5, ty: 0.5, vx: 0, vy: 0 };
     let raf = 0;
@@ -78,18 +79,24 @@ export function FluidBackground() {
       ctx.fillRect(0, 0, w, h);
       ctx.globalCompositeOperation = "source-over";
 
-      raf = window.requestAnimationFrame(draw);
+      if (!reduceMotion) {
+        raf = window.requestAnimationFrame(draw);
+      }
     };
 
     resize();
     draw();
     window.addEventListener("resize", resize);
-    window.addEventListener("mousemove", onMove, { passive: true });
+    if (!reduceMotion) {
+      window.addEventListener("mousemove", onMove, { passive: true });
+    }
 
     return () => {
       window.cancelAnimationFrame(raf);
       window.removeEventListener("resize", resize);
-      window.removeEventListener("mousemove", onMove);
+      if (!reduceMotion) {
+        window.removeEventListener("mousemove", onMove);
+      }
     };
   }, []);
 

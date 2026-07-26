@@ -1,24 +1,25 @@
 ---
 title: "Roadmap"
-updated: "2026-05-05"
+updated: "2026-07-26"
 ---
 
-## Next
+## Ready for review — revival baseline
 
-- Finish the May content freshness pass and keep the Build Log tied to real commits
-- Fix market feed resilience so one failed RSS source does not blank the whole widget
-- Convert internal starter links from production URLs to relative paths
-- Add navigation links for published Roadmap, Playbooks, and Experiments pages
+- Framework security, clean installs, CI, and focused tests are in place
+- The public story now centers on projects, evidence, and honest status
+- Desktop and true 390 px mobile layouts are verified without document overflow
+- Legacy operator files are isolated under the historical archive
+- The research fixture is compact and explicitly labeled as historical
 
-## Soon
+## Next — review and merge
 
-- Add a dedicated "Operating on Mac" page that explains the OpenClaw workflow and stack
-- Add weekly "what shipped / what failed / what changed" digest blocks
-- Generate changelog entries from git commits
-- Add custom OG share card and polish brand assets
+- Prove the new CI workflow in GitHub Actions
+- Review and merge through `main`
+- Verify the resulting Vercel deployment and key routes
 
-## Later
+## Then — operate deliberately
 
-- Add lightweight analytics only when the signal will change decisions
-- Launch 24/7 YouTube live stream mode with safe scene switching and stream overlays
-- Add a Python backend only for secrets, jobs, auth, or orchestration
+- Decide whether each prototype stays in this repository or moves to its own home
+- Confirm Vercel ownership, environment, analytics, and deployment settings
+- Add branch protection after the new checks have proved stable
+- Refresh evidence only when a source and verification date are available

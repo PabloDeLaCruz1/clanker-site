@@ -1,20 +1,41 @@
 # clanker-site
 
-Public build journal for **Clanker** — an AI-native operator workflow running on a dedicated Mac via OpenClaw.
+The public home for Pablo's Clanker experiments, engineering prototypes, and build notes.
+
+The project has been revived from its original OpenClaw-era setup. The primary Next.js app now presents a current, evidence-backed AI engineering lab; the old operator identity, memory, and automation files are preserved only as history. See [`docs/REVIVAL_PLAN.md`](docs/REVIVAL_PLAN.md) for the audited baseline and milestone plan.
 
 ## Live site
 
 - https://clanker-site.vercel.app
 
-## What this project is
+## Current status
 
-`clanker-site` is the public layer for our work:
+- Primary app: repository root
+- Production: https://clanker-site.vercel.app
+- Revival branch: `codex/revive-clanker-site`
+- Required checks: lint, TypeScript, production build
+- CI: GitHub Actions
 
-- what we’re building now
-- what shipped (build log)
-- practical use cases and workflow prototypes
-- trend analysis (AI + markets)
-- telemetry and operating signals
+The revival branch contains the new product narrative, security upgrades, CI, focused tests, and the historical archive. Production remains unchanged until the reviewed branch is intentionally merged and deployed.
+
+## Workspace
+
+- `src/`, `content/`, `public/` — primary `clanker-site` app
+- `data-pipeline-lab-site/` — research-signal web prototype
+- `workflow-client-intake/` — client-intake web prototype
+- `clanker-video/` — Remotion media project
+- `data-pipeline-lab/` — Python, PostgreSQL, Prefect, and dbt prototype
+- `docs/archive/openclaw/` — historical operator setup
+
+## What the primary app is
+
+`clanker-site` is the public layer for Pablo's work:
+
+- what is being built now
+- shipped prototypes and their evidence
+- architecture decisions and implementation notes
+- dated field notes
+- honest project-health snapshots
 
 The site is intentionally lightweight and fast to update.
 
@@ -28,11 +49,24 @@ The site is intentionally lightweight and fast to update.
 ## Local development
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
 Open http://localhost:3000
+
+Use Node.js 20.9 or newer.
+
+## Verification
+
+```bash
+npm run check
+npm audit --omit=dev --audit-level=high
+```
+
+Prototype apps have the same `lint`, `typecheck`, `build`, and `check` scripts. The Remotion project uses `npm run verify`.
+
+The patched lockfiles currently pass production audits. npm still reports development-only advisories through ESLint's glob-matching dependency tree; npm has no non-breaking remediation path, so those are tracked rather than force-downgraded.
 
 ## Content model
 
@@ -46,7 +80,8 @@ Primary content files:
 
 ## Key routes
 
-- `/` → Now + stream + market feed
+- `/` → current focus, evidence, and selected projects
+- `/projects`
 - `/build-log`
 - `/workflow-lab`
 - `/use-cases`
@@ -55,10 +90,11 @@ Primary content files:
 
 ## Deployment workflow
 
-1. Edit
-2. Commit
-3. Push to `main`
-4. Verify deployment in Vercel
+1. Work on a branch.
+2. Run the relevant local checks.
+3. Open a pull request and wait for CI.
+4. Merge to `main`.
+5. Verify the Vercel deployment and key routes.
 
 ## Shipping discipline
 

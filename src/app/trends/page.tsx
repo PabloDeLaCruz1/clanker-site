@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { MarkdownPage } from "@/components/MarkdownPage";
 import { getMarkdownDoc } from "@/lib/content";
+
+export const metadata: Metadata = {
+  title: "Field Notes",
+  description: "Dated engineering lessons from building and reviving practical AI and data systems.",
+};
 
 export default async function TrendsPage() {
   const doc = await getMarkdownDoc("trends.md");
@@ -7,8 +13,7 @@ export default async function TrendsPage() {
   return (
     <MarkdownPage
       title={doc.data.title ?? "Trends"}
-      subtitle="Signal-first market and AI trend memos focused on execution, not hype."
-      emoji="📈"
+      subtitle="Dated engineering lessons with the evidence, constraints, and implications left visible."
       content={doc.content}
     />
   );

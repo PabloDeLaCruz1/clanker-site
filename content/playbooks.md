@@ -1,22 +1,23 @@
 ---
 title: "Playbooks"
-updated: "2026-05-05"
+updated: "2026-07-25"
 ---
 
-## Content freshness pass
+## Revive a stale project
 
-1. Search the repo for stale dates, "current" labels, and outdated status claims
-2. Update the public status pages first: Now, Weekly Progress, Telemetry, Build Log
-3. Refresh editorial pages next: Trends, Workflow Lab, Use Cases, Playbooks, Roadmap, Experiments
-4. Run lint and production build before publishing
-5. Add a build-log entry so the maintenance work is visible
+1. Confirm repository ownership, branch state, and live endpoints
+2. Inventory deployable apps, dependencies, automation, data, and historical context
+3. Reproduce clean installs, audits, lint, type checks, and builds
+4. Correct false-current claims before redesigning the interface
+5. Publish through a review branch and verify the deployment
 
-## Ship in 48 hours
+## Label evidence
 
-1. Define a single user outcome and success metric
-2. Build the smallest useful version end-to-end
-3. Ship publicly and collect feedback from first 5 users
-4. Iterate once per week based on observed behavior
+1. Use **Live prototype** only when the endpoint was verified
+2. Use **Local prototype** when the build is verified but no public service exists
+3. Label snapshots and estimates directly
+4. Date every operating claim that can become stale
+5. Move superseded workflows into history instead of pretending they still run
 
 ## When to add a backend
 

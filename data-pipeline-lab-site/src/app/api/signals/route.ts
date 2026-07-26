@@ -81,27 +81,27 @@ export async function GET() {
       : undefined;
 
     const dates = buildDateRange(30, latestPaperDate);
-    const keywordSeries = buildKeywordSeries(papers, dates);
-    const themeSeries = buildThemeSeries(papers, dates);
+    const computedHistory = {
+      days: dates,
+      keywords: buildKeywordSeries(papers, dates),
+      themes: buildThemeSeries(papers, dates),
+    };
 
     return NextResponse.json(
       {
-        mode: parsed.mode ?? "cached-arxiv-incremental",
+        mode: parsed.mode ?? "cached-arxiv-snapshot",
         updatedAt: parsed.updatedAt,
         windows: parsed.windows,
         items: parsed.items ?? [],
-        history: {
-          days: dates,
-          keywords: keywordSeries,
-          themes: themeSeries,
-        },
+        history: parsed.history ?? computedHistory,
+        note: parsed.note,
       },
       { headers: { "Cache-Control": "no-store" } },
     );
   } catch {
     return NextResponse.json(
       {
-        mode: "cached-arxiv-incremental",
+        mode: "cached-arxiv-snapshot",
         updatedAt: new Date().toISOString(),
         windows: { current: "last_7d", previous: "prior_7d", papers7d: 0, papersPrev7d: 0 },
         items: [],
