@@ -9,7 +9,10 @@
     "test": "tsx --test tests/**/*.test.ts",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "check": "npm run test && npm run lint && npm run typecheck && npm run build"
+    "check": "npm run test && npm run lint && npm run typecheck && npm run build",
+    "verify:production": "node scripts/verify-deployments.mjs --scope=root",
+    "verify:prototypes": "node scripts/verify-deployments.mjs --scope=prototypes",
+    "verify:deployments": "node scripts/verify-deployments.mjs --scope=all"
   },
   "engines": {
     "node": ">=20.9.0"

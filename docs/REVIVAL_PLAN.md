@@ -1,6 +1,6 @@
 # Clanker Site Revival Plan
 
-Status: primary revival shipped; prototype deployment follow-up documented
+Status: primary revival shipped; prototype deployment handoff operationalized
 Owner: Pablo + Codex
 Started: 2026-07-25
 
@@ -45,7 +45,7 @@ OpenClaw should become historical implementation context, not a current capabili
 
 ## Current state
 
-Milestones 1–3 and the primary-app portion of milestone 4 are complete. PR #1 merged as `e895315`; all five post-merge CI jobs passed; Vercel reported a successful production deployment; and the refreshed primary routes were verified over HTTP. Branch protection and the separately hosted prototype deployments remain operating follow-ups.
+Milestones 1–3 and the primary-app portion of milestone 4 are complete. PR #1 merged as `e895315`; all five post-merge CI jobs passed; Vercel reported a successful production deployment; and the refreshed primary routes were verified over HTTP. PR #2 merged as `d36ffdb`, its five post-merge CI jobs passed, and the corrected release status was verified in production. The prototype source is healthy in CI, but its two older Vercel projects require account-level reconnection. Branch protection also requires an administrator on the original GitHub account.
 
 ## Milestones
 
@@ -86,7 +86,7 @@ Exit: active code has a clear owner and test path; historical material cannot be
 
 ### 4. Relaunch and operate
 
-Status: primary app complete; separate prototype deployments pending
+Status: primary app complete; prototype reconnection runbook ready
 
 - Complete responsive, accessibility, metadata, and social-card QA.
 - Verify Vercel project ownership, environment, analytics, and deployment settings.
@@ -108,3 +108,5 @@ Exit: the refreshed site is live, monitored, and documented.
 - 2026-07-26: Add focused tests for content metadata, project records, and RSS normalization.
 - 2026-07-26: Merge PR #1 as `e895315`; verify five successful CI jobs and the primary Vercel production deployment.
 - 2026-07-26: Record the research and intake Vercel projects as separate deployment follow-ups rather than implying they updated with the root app.
+- 2026-07-26: Merge PR #2 as `d36ffdb`; verify five post-merge CI jobs, the Vercel production deployment, and corrected public status copy.
+- 2026-07-26: Add deterministic deployment markers, production smoke checks, and an exact Vercel reconnection/retirement runbook for the two independently hosted prototypes.
