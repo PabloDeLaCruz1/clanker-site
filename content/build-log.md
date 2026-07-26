@@ -7,6 +7,7 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
+- `GitHub` — Protect `main` with required pull requests, one independent approval, five up-to-date CI jobs, resolved conversations, and no force-pushes or deletion
 - `Vercel` — Deploy the reviewed Research Signal Lab and Workflow Client Intake builds to their original production URLs; verify all six public page and API checks
 - `472c684` — Merge deployment ownership, smoke checks, and supported GitHub Action runtimes; pass all five post-merge CI jobs and deploy the primary site
 - `d36ffdb` — Publish the verified revival status; pass five post-merge CI jobs and deploy the corrected production content
