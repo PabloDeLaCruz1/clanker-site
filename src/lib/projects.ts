@@ -3,7 +3,12 @@ export type Project = {
   description: string;
   evidence: string;
   stack: string[];
-  status: "Live" | "Reviving" | "Live prototype" | "Historical prototype";
+  status:
+    | "Live"
+    | "Reviving"
+    | "Live prototype"
+    | "Snapshot prototype"
+    | "Historical prototype";
   href: string;
   external?: boolean;
 };
@@ -21,10 +26,10 @@ export const projects: Project[] = [
   {
     title: "Research Signal Lab",
     description:
-      "A dated research-signal demo that scores topic acceleration and preserves its March snapshot as inspectable historical evidence.",
-    evidence: "Reviewed deployment, historical label, and snapshot API verified July 26, 2026",
+      "A bounded research-signal demo that scores topic acceleration from a deliberately refreshed arXiv snapshot.",
+    evidence: "6,754-paper snapshot refreshed July 26; source coverage verified through July 23",
     stack: ["Python", "dbt", "PostgreSQL", "Next.js"],
-    status: "Historical prototype",
+    status: "Snapshot prototype",
     href: "https://data-pipeline-lab-site.vercel.app",
     external: true,
   },

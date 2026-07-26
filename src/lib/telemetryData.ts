@@ -15,7 +15,7 @@ export const telemetryData = {
   output: [
     { label: "Revival milestone", value: "Shipped", note: "Merge and primary Vercel deployment verified July 26" },
     { label: "Production commit", value: "e895315", note: "All five GitHub Actions jobs passed" },
-    { label: "Prototype status", value: "1 + 1", note: "One live intake demo; one historical research snapshot" },
+    { label: "Prototype status", value: "1 + 1", note: "One live intake demo; one refreshed research snapshot" },
     { label: "Historical runtime", value: "Archived", note: "OpenClaw-era claims are preserved as history, not active status" },
   ],
 };

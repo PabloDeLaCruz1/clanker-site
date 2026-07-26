@@ -18,6 +18,7 @@ export const weeklyUpdates: WeeklyUpdate[] = [
       "Added focused tests for content metadata, project records, and RSS normalization",
       "Merged the revival baseline, passed all five GitHub Actions jobs, and verified the primary Vercel deployment",
       "Deployed both independently hosted prototypes from the reviewed source and verified their production freshness markers",
+      "Refreshed the bounded arXiv snapshot from 6,754 recent papers with source coverage through July 23",
     ],
   },
   {

@@ -113,3 +113,4 @@ Exit: the refreshed site is live, monitored, and documented.
 - 2026-07-26: Merge PR #3 as `472c684`; pass all five post-merge CI jobs and deploy the primary site with supported Node 24 GitHub Action runtimes.
 - 2026-07-26: Authenticate the owning Vercel account, link both existing prototype projects, deploy the reviewed source, and verify all production freshness checks.
 - 2026-07-26: Authenticate the repository owner and protect `main` with an approval gate, all five CI checks, strict branch freshness, resolved conversations, and destructive-update protection.
+- 2026-07-26: Replace the preserved March research fixture with a 6,754-paper bounded refresh; anchor comparisons to complete source days and add explicit refresh/source freshness limits.

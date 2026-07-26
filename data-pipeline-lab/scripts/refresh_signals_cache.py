@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import time
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -72,28 +73,77 @@ def parse_entries(xml: str) -> List[Paper]:
     return out
 
 
-def fetch_recent(max_results: int = 2000) -> List[Paper]:
+def fetch_recent(max_results: int = 7500, page_size: int = 2500) -> List[Paper]:
     import requests
 
     query = "cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL+OR+cat:stat.ML"
-    url = (
-        f"https://export.arxiv.org/api/query?search_query={query}"
-        f"&sortBy=submittedDate&sortOrder=descending&start=0&max_results={max_results}"
-    )
-    resp = requests.get(url, timeout=40)
-    resp.raise_for_status()
     uniq: Dict[str, Paper] = {}
-    for p in parse_entries(resp.text):
-        uniq[p.paper_id] = p
+    headers = {
+        "User-Agent": (
+            "clanker-site research snapshot maintainer "
+            "(https://github.com/PabloDeLaCruz1/clanker-site)"
+        )
+    }
+
+    for start in range(0, max_results, page_size):
+        requested = min(page_size, max_results - start)
+        url = (
+            f"https://export.arxiv.org/api/query?search_query={query}"
+            f"&sortBy=submittedDate&sortOrder=descending"
+            f"&start={start}&max_results={requested}"
+        )
+
+        for attempt in range(3):
+            try:
+                resp = requests.get(url, headers=headers, timeout=120)
+                resp.raise_for_status()
+                break
+            except requests.RequestException:
+                if attempt == 2:
+                    raise
+                time.sleep(5 * (attempt + 1))
+
+        page = parse_entries(resp.text)
+        for paper in page:
+            uniq[paper.paper_id] = paper
+
+        if len(page) < requested:
+            break
+        if start + requested < max_results:
+            time.sleep(3)
+
     return list(uniq.values())
 
 
 def compute_items(papers: List[Paper]) -> dict:
-    now = datetime.now(timezone.utc)
-    start_7 = now - timedelta(days=7)
-    start_14 = now - timedelta(days=14)
+    refreshed_at = datetime.now(timezone.utc)
+    if not papers:
+        return {
+            "mode": "cached-arxiv-snapshot",
+            "updatedAt": refreshed_at.isoformat(),
+            "sourceThrough": None,
+            "coverageStart": None,
+            "sampleSize": 0,
+            "windows": {
+                "current": "latest_7_complete_source_days",
+                "previous": "prior_7_source_days",
+                "papers7d": 0,
+                "papersPrev7d": 0,
+            },
+            "items": [],
+        }
 
-    p7 = [p for p in papers if p.published >= start_7]
+    latest = max(paper.published for paper in papers)
+    earliest = min(paper.published for paper in papers)
+    window_end = datetime.combine(
+        latest.date() + timedelta(days=1),
+        datetime.min.time(),
+        tzinfo=timezone.utc,
+    )
+    start_7 = window_end - timedelta(days=7)
+    start_14 = window_end - timedelta(days=14)
+
+    p7 = [p for p in papers if start_7 <= p.published < window_end]
     pprev = [p for p in papers if start_14 <= p.published < start_7]
 
     items = []
@@ -120,10 +170,13 @@ def compute_items(papers: List[Paper]) -> dict:
     items.sort(key=lambda r: r["score"], reverse=True)
     return {
         "mode": "cached-arxiv-snapshot",
-        "updatedAt": now.isoformat(),
+        "updatedAt": refreshed_at.isoformat(),
+        "sourceThrough": latest.isoformat(),
+        "coverageStart": earliest.isoformat(),
+        "sampleSize": len(papers),
         "windows": {
-            "current": "last_7d",
-            "previous": "prior_7d",
+            "current": "latest_7_complete_source_days",
+            "previous": "prior_7_source_days",
             "papers7d": len(p7),
             "papersPrev7d": len(pprev),
         },
@@ -136,7 +189,11 @@ def compute_history(papers: List[Paper], days: int = 30) -> dict:
         return {"days": [], "keywords": [], "themes": []}
 
     latest = max(p.published for p in papers)
-    dates = [(latest - timedelta(days=offset)).date().isoformat() for offset in range(days - 1, -1, -1)]
+    earliest = min(p.published for p in papers)
+    requested_start = latest.date() - timedelta(days=days - 1)
+    start = max(requested_start, earliest.date())
+    available_days = (latest.date() - start).days + 1
+    dates = [(start + timedelta(days=offset)).isoformat() for offset in range(available_days)]
 
     def series(key: str, label: str, keywords: List[str]) -> dict:
         points = []
@@ -162,11 +219,16 @@ def compute_history(papers: List[Paper], days: int = 30) -> dict:
 
 def write_snapshot(papers: List[Paper], *, preserve_metadata: dict | None = None) -> None:
     computed = preserve_metadata or compute_items(papers)
+    source_through = computed.get("sourceThrough")
+    source_date = source_through[:10] if source_through else "unavailable"
     payload = {
         **computed,
         "mode": "cached-arxiv-snapshot",
         "history": compute_history(papers),
-        "note": "Historical research snapshot; refresh intentionally before using it as current evidence.",
+        "note": (
+            "Bounded arXiv snapshot refreshed from recent source records; "
+            f"source coverage through {source_date}. This is not a real-time feed."
+        ),
     }
     CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
     CACHE_PATH.write_text(json.dumps(payload, separators=(",", ":")), encoding="utf-8")
@@ -197,8 +259,12 @@ def main() -> None:
         return
 
     now = datetime.now(timezone.utc)
-    cutoff = now - timedelta(days=30)
-    recent = [paper for paper in fetch_recent(max_results=2000) if paper.published >= cutoff]
+    cutoff_date = (now - timedelta(days=30)).date()
+    recent = [
+        paper
+        for paper in fetch_recent(max_results=7500)
+        if paper.published.date() >= cutoff_date
+    ]
     recent.sort(key=lambda paper: paper.published)
     write_snapshot(recent)
 

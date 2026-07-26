@@ -91,6 +91,9 @@ export async function GET() {
       {
         mode: parsed.mode ?? "cached-arxiv-snapshot",
         updatedAt: parsed.updatedAt,
+        sourceThrough: parsed.sourceThrough,
+        coverageStart: parsed.coverageStart,
+        sampleSize: parsed.sampleSize,
         windows: parsed.windows,
         items: parsed.items ?? [],
         history: parsed.history ?? computedHistory,
@@ -103,7 +106,15 @@ export async function GET() {
       {
         mode: "cached-arxiv-snapshot",
         updatedAt: new Date().toISOString(),
-        windows: { current: "last_7d", previous: "prior_7d", papers7d: 0, papersPrev7d: 0 },
+        sourceThrough: null,
+        coverageStart: null,
+        sampleSize: 0,
+        windows: {
+          current: "latest_7_complete_source_days",
+          previous: "prior_7_source_days",
+          papers7d: 0,
+          papersPrev7d: 0,
+        },
         items: [],
         history: { days: [], keywords: [], themes: [] },
         note: "signals cache not initialized; run refresh_signals_cache.py",

@@ -18,6 +18,9 @@ type Series = { key: string; label: string; points: Point[] };
 type SignalResponse = {
   mode: string;
   updatedAt: string;
+  sourceThrough?: string;
+  coverageStart?: string;
+  sampleSize?: number;
   note?: string;
   windows?: {
     current: string;
@@ -113,6 +116,8 @@ export default function Home() {
   const [q, setQ] = useState("");
   const [rows, setRows] = useState<Row[]>([]);
   const [updatedAt, setUpdatedAt] = useState<string>("");
+  const [sourceThrough, setSourceThrough] = useState<string>("");
+  const [sampleSize, setSampleSize] = useState<number>();
   const [meta, setMeta] = useState<SignalResponse["windows"]>();
   const [history, setHistory] = useState<SignalResponse["history"]>();
   const [note, setNote] = useState("");
@@ -126,11 +131,13 @@ export default function Home() {
         const data: SignalResponse = await res.json();
         setRows(data.items ?? []);
         setUpdatedAt(data.updatedAt ?? "");
+        setSourceThrough(data.sourceThrough ?? "");
+        setSampleSize(data.sampleSize);
         setMeta(data.windows);
         setHistory(data.history);
         setNote(data.note ?? "");
       } catch {
-        setError("The historical signal snapshot is temporarily unavailable.");
+        setError("The research signal snapshot is temporarily unavailable.");
       }
     };
     load();
@@ -146,19 +153,27 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white px-6 py-10 text-slate-900 dark:from-slate-950 dark:to-slate-900 dark:text-slate-100">
       <div className="mx-auto max-w-6xl">
         <div className="rounded-2xl border border-slate-200/70 bg-white/80 p-6 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/70">
-          <p className="text-xs uppercase tracking-[0.2em] text-indigo-500">Historical Prototype</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-indigo-500">Refreshed Snapshot</p>
           <h1 className="mt-2 text-4xl font-bold tracking-tight">Data Pipeline Lab</h1>
           <p className="mt-2 text-slate-600 dark:text-slate-300">
-            arXiv research-signal exploration from a dated, reviewable snapshot.
+            arXiv research-signal exploration from a bounded, reviewable snapshot.
           </p>
 
           <div className="mt-4 flex flex-wrap gap-2 text-xs">
             <span className="rounded-full border border-emerald-300/60 bg-emerald-100 px-3 py-1 text-emerald-700 dark:border-emerald-700/70 dark:bg-emerald-900/30 dark:text-emerald-300">
-              Data: cached arXiv snapshot
+              Data: bounded arXiv snapshot
             </span>
             <span className="rounded-full border border-slate-300/60 bg-slate-100 px-3 py-1 text-slate-700 dark:border-slate-700/70 dark:bg-slate-800 dark:text-slate-300">
-              Updated: {updatedAt ? new Date(updatedAt).toLocaleString() : "loading..."}
+              Refreshed: {updatedAt ? new Date(updatedAt).toLocaleString() : "loading..."}
             </span>
+            <span className="rounded-full border border-slate-300/60 bg-slate-100 px-3 py-1 text-slate-700 dark:border-slate-700/70 dark:bg-slate-800 dark:text-slate-300">
+              Source through: {sourceThrough ? new Date(sourceThrough).toLocaleDateString() : "loading..."}
+            </span>
+            {sampleSize ? (
+              <span className="rounded-full border border-cyan-300/60 bg-cyan-100 px-3 py-1 text-cyan-700 dark:border-cyan-700/70 dark:bg-cyan-900/30 dark:text-cyan-300">
+                Bounded sample: {sampleSize.toLocaleString()} papers
+              </span>
+            ) : null}
             {meta ? (
               <span className="rounded-full border border-indigo-300/60 bg-indigo-100 px-3 py-1 text-indigo-700 dark:border-indigo-700/70 dark:bg-indigo-900/30 dark:text-indigo-300">
                 Sampled papers {meta.papers7d} vs {meta.papersPrev7d}
@@ -175,7 +190,7 @@ export default function Home() {
         </div>
 
         <section className="mt-6 rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-          <h2 className="text-lg font-semibold">Historical Charts (30d)</h2>
+          <h2 className="text-lg font-semibold">Research Trends (up to 30d)</h2>
           <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
             Trend lines provide timeline context beyond the 7-day snapshot (window ends at latest day with data).
           </p>
