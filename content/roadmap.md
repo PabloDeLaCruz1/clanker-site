@@ -21,5 +21,5 @@ updated: "2026-07-26"
 ## Next — operate deliberately
 
 - Decide whether each prototype stays in this repository or moves to its own home
-- Add branch protection now that the checks have proved stable on `main`
+- Keep protected-branch CI and the production verifier as release gates
 - Refresh evidence only when a source and verification date are available

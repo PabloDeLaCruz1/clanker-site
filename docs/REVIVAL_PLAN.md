@@ -1,6 +1,6 @@
 # Clanker Site Revival Plan
 
-Status: application revival complete; branch protection pending repository admin
+Status: revival complete
 Owner: Pablo + Codex
 Started: 2026-07-25
 
@@ -45,7 +45,7 @@ OpenClaw should become historical implementation context, not a current capabili
 
 ## Current state
 
-All four revival milestones are complete. PRs #1–3 merged through `472c684`; each post-merge run passed all five CI jobs; and the primary Vercel deployments were verified. The Research Signal Lab and Workflow Client Intake projects were then deployed from the reviewed source to their original production URLs. Their page, API, and deployment markers passed the repository-wide production verifier. Branch protection remains an account-level follow-up because the current maintainer role is Write rather than Admin.
+All four revival milestones are complete. PRs #1–3 merged through `472c684`; each post-merge run passed all five CI jobs; and the primary Vercel deployments were verified. The Research Signal Lab and Workflow Client Intake projects were then deployed from the reviewed source to their original production URLs. Their page, API, and deployment markers passed the repository-wide production verifier. The repository owner protected `main` with required pull requests, one independent approval, all five up-to-date CI jobs, resolved conversations, and force-push/deletion protection.
 
 ## Milestones
 
@@ -112,3 +112,4 @@ Exit: the refreshed site is live, monitored, and documented.
 - 2026-07-26: Add deterministic deployment markers, production smoke checks, and an exact Vercel reconnection/retirement runbook for the two independently hosted prototypes.
 - 2026-07-26: Merge PR #3 as `472c684`; pass all five post-merge CI jobs and deploy the primary site with supported Node 24 GitHub Action runtimes.
 - 2026-07-26: Authenticate the owning Vercel account, link both existing prototype projects, deploy the reviewed source, and verify all production freshness checks.
+- 2026-07-26: Authenticate the repository owner and protect `main` with an approval gate, all five CI checks, strict branch freshness, resolved conversations, and destructive-update protection.
