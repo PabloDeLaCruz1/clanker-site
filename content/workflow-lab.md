@@ -1,106 +1,74 @@
 ---
-title: "Workflow Lab"
-updated: "2026-05-05"
+title: "Projects & Prototypes"
+updated: "2026-07-25"
 ---
 
-Live prototypes we are building and testing on stream.
+The deeper project record: what each system does, what is verified, and what remains unfinished.
 
-## 🧹 Site Freshness + Source-of-Truth Cleanup `Production`
+## Clanker Site `Reviving`
 
-**Input**
-- Repo review findings, stale content pages, duplicate app roots, and deployment assumptions.
+**Purpose**
+- Make Pablo's AI, data, and developer-tool work inspectable in one place.
 
-**Agent actions**
-- Compare root and nested app copies
-- Preserve newer content in the root app
-- Remove the duplicate nested app
-- Re-run lint and production build checks
-- Refresh stale public content into a current dated snapshot
+**Verified**
+- The public endpoint returns HTTP 200.
+- The root app passes lint, TypeScript, production build, and a production dependency audit.
+- The repository has one app of record and a documented revival plan.
 
-**Output**
-- One deployable clanker-site app with May 5 content state.
+**In progress**
+- Product reframe, visual QA, CI publication, and deployment verification.
 
-**Time saved (estimate)**
-- 1-2 hours of manual repo archaeology and content reconciliation.
-
----
-
-## 🧩 Client Intake Automation `Production`
-
-**Input**
-- Raw messages, forms, notes, and docs from a lead/client.
-
-**Agent actions**
-- Normalize incoming data
-- Extract key fields
-- Generate intake summary + next-step checklist
-
-**Output**
-- Structured intake packet ready for action.
-
-**Time saved (estimate)**
-- 30–60 minutes per intake cycle.
-
-**Live demo**
-- https://workflow-client-intake.vercel.app
+**Stack**
+- Next.js, TypeScript, Tailwind CSS, Vercel
 
 ---
 
-## 📈 Weekly Trends Memo `Production`
+## Workflow Client Intake `Live prototype`
 
-**Input**
-- Current project signals, operating lessons, and distribution feedback.
+**Purpose**
+- Turn a loosely described business process into a structured automation brief.
 
-**Agent actions**
-- Distill signals
-- Add impact context
-- Convert to action-oriented memo format
+**Verified**
+- The public prototype endpoint returns HTTP 200.
+- The app passes lint, TypeScript, production build, and a production dependency audit.
 
-**Output**
-- `Signal → Why it matters → What we do` memo format.
+**Boundary**
+- It demonstrates the intake interaction; it is not presented as a production CRM or persistent client system.
 
-**Time saved (estimate)**
-- 2–4 hours per week.
-
----
-
-## 🧠 Research Signal Intelligence Pipeline `Testing`
-
-**Input**
-- arXiv paper metadata (title, abstract, categories, publish date)
-
-**Agent actions**
-- Apply keyword taxonomy by theme
-- Compute daily mention shares
-- Score trend acceleration (7d vs prior 7d)
-
-**Output**
-- Early-signal trend tables and dashboard-ready metrics for prototype review.
-
-**Time saved (estimate)**
-- 3–6 hours per week on trend scouting and synthesis.
-
-**Web prototype**
-- https://data-pipeline-lab-site.vercel.app
+**Demo**
+- [Open Workflow Client Intake](https://workflow-client-intake.vercel.app)
 
 ---
 
-## 🧱 Build Log Autopublisher `Planned`
+## Research Signal Lab `Live prototype · historical snapshot`
 
-**Input**
-- Recent commits and deployment events.
+**Purpose**
+- Ingest research-paper metadata, classify topics, and compare recent topic share with a prior window.
 
-**Agent actions**
-- Summarize meaningful changes
-- Convert into human-readable ship notes
-- Publish to build log with consistent style
+**Verified**
+- The public prototype endpoint returns HTTP 200.
+- The site and API route pass lint, TypeScript, production build, and a production dependency audit.
+- The Python ingestion, transformation, and orchestration sources compile.
 
-**Output**
-- High-signal build log without manual copy work.
+**Boundary**
+- The checked-in cache was generated in March 2026. It is useful as a demo fixture, not as a live research feed.
 
-**Time saved (estimate)**
-- 20–40 minutes per release.
+**Demo**
+- [Open Research Signal Lab](https://data-pipeline-lab-site.vercel.app)
 
 ---
 
-More workflows shipping soon.
+## Clanker Motion Kit `Local prototype`
+
+**Purpose**
+- Produce reusable 15-second vertical explainers for projects and technical ideas.
+
+**Verified**
+- A clean install bundles the Founder, Markets, and Automation compositions.
+
+**Boundary**
+- The kit is maintained locally and is not a public rendering service.
+
+## Historical operator automations `Archived`
+
+OpenClaw, Telegram recovery, Moltbook posting, and machine-specific cadence scripts are retained as implementation history. They are not active services and are not part of the current product contract.

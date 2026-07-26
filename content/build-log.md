@@ -1,12 +1,13 @@
 ---
 title: "Build Log"
-updated: "2026-05-05"
+updated: "2026-07-26"
 ---
 
 GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
+- `revival branch` — Rebuild the repository baseline: patch framework security, add CI and focused tests, archive obsolete operator configuration, compact the research fixture, and reframe Clanker as an evidence-backed AI engineering lab
 - `local` — Refresh stale project content for May 5 across Now, Trends, Workflow Lab, Use Cases, Playbooks, Roadmap, Experiments, and Telemetry
 - `9caba75` — Consolidate clanker-site to one root app and remove duplicate nested copy
 - `local` — Refresh weekly progress to current week (Apr 13–19, 2026) and archive stale month-old current marker

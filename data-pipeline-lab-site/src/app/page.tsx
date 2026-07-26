@@ -18,6 +18,7 @@ type Series = { key: string; label: string; points: Point[] };
 type SignalResponse = {
   mode: string;
   updatedAt: string;
+  note?: string;
   windows?: {
     current: string;
     previous: string;
@@ -114,15 +115,23 @@ export default function Home() {
   const [updatedAt, setUpdatedAt] = useState<string>("");
   const [meta, setMeta] = useState<SignalResponse["windows"]>();
   const [history, setHistory] = useState<SignalResponse["history"]>();
+  const [note, setNote] = useState("");
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const load = async () => {
-      const res = await fetch("/api/signals", { cache: "no-store" });
-      const data: SignalResponse = await res.json();
-      setRows(data.items ?? []);
-      setUpdatedAt(data.updatedAt ?? "");
-      setMeta(data.windows);
-      setHistory(data.history);
+      try {
+        const res = await fetch("/api/signals", { cache: "no-store" });
+        if (!res.ok) throw new Error(`Signal request failed with ${res.status}`);
+        const data: SignalResponse = await res.json();
+        setRows(data.items ?? []);
+        setUpdatedAt(data.updatedAt ?? "");
+        setMeta(data.windows);
+        setHistory(data.history);
+        setNote(data.note ?? "");
+      } catch {
+        setError("The historical signal snapshot is temporarily unavailable.");
+      }
     };
     load();
   }, []);
@@ -137,15 +146,15 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white px-6 py-10 text-slate-900 dark:from-slate-950 dark:to-slate-900 dark:text-slate-100">
       <div className="mx-auto max-w-6xl">
         <div className="rounded-2xl border border-slate-200/70 bg-white/80 p-6 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/70">
-          <p className="text-xs uppercase tracking-[0.2em] text-indigo-500">Live Prototype</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-indigo-500">Historical Prototype</p>
           <h1 className="mt-2 text-4xl font-bold tracking-tight">Data Pipeline Lab</h1>
           <p className="mt-2 text-slate-600 dark:text-slate-300">
-            arXiv Research Signal Intelligence — real-time keyword acceleration for early trend detection.
+            arXiv research-signal exploration from a dated, reviewable snapshot.
           </p>
 
           <div className="mt-4 flex flex-wrap gap-2 text-xs">
             <span className="rounded-full border border-emerald-300/60 bg-emerald-100 px-3 py-1 text-emerald-700 dark:border-emerald-700/70 dark:bg-emerald-900/30 dark:text-emerald-300">
-              API: cached-arXiv
+              Data: cached arXiv snapshot
             </span>
             <span className="rounded-full border border-slate-300/60 bg-slate-100 px-3 py-1 text-slate-700 dark:border-slate-700/70 dark:bg-slate-800 dark:text-slate-300">
               Updated: {updatedAt ? new Date(updatedAt).toLocaleString() : "loading..."}
@@ -161,6 +170,8 @@ export default function Home() {
               </span>
             ) : null}
           </div>
+          {note ? <p className="mt-4 text-sm text-amber-700 dark:text-amber-300">{note}</p> : null}
+          {error ? <p className="mt-4 text-sm text-red-700 dark:text-red-300">{error}</p> : null}
         </div>
 
         <section className="mt-6 rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">

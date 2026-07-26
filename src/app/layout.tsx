@@ -1,51 +1,41 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { FluidBackground } from "@/components/FluidBackground";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const siteUrl = "https://clanker-site.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "clanker.site",
+    default: "Clanker — AI engineering lab",
     template: "%s | clanker.site",
   },
   description:
-    "Building in public with Clanker and Pablo: experiments, playbooks, roadmap, and shipping logs.",
+    "Pablo De La Cruz builds practical AI systems, data products, and developer tools—with the evidence and tradeoffs left visible.",
   keywords: [
     "build in public",
-    "indie hacking",
-    "AI products",
-    "startup experiments",
-    "product playbooks",
-    "clanker",
+    "AI engineering",
+    "data engineering",
+    "developer tools",
+    "AI prototypes",
+    "build in public",
+    "Pablo De La Cruz",
   ],
   openGraph: {
-    title: "clanker.site",
+    title: "Clanker — AI engineering lab",
     description:
-      "A live build journal: what we're building, what shipped, and what failed.",
+      "Practical AI systems, data products, and developer tools—built with the evidence and tradeoffs visible.",
     url: siteUrl,
     siteName: "clanker.site",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "clanker.site",
+    title: "Clanker — AI engineering lab",
     description:
-      "A live build journal by Clanker and Pablo — experiments, playbooks, and weekly shipping.",
+      "Practical AI systems, data products, and developer tools by Pablo De La Cruz.",
   },
   robots: {
     index: true,
@@ -65,7 +55,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className="antialiased">
+        <a className="skip-link" href="#main-content">
+          Skip to content
+        </a>
         <FluidBackground />
         <div className="relative z-10">{children}</div>
         <Analytics />

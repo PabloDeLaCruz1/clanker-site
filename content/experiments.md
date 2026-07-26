@@ -1,22 +1,24 @@
 ---
 title: "Experiments"
-updated: "2026-05-05"
+updated: "2026-07-25"
 ---
 
-## Frontend-first, backend-later *(running)*
+## Evidence before animation *(running)*
 
-Hypothesis: speed + transparency beats complexity at this stage.
+Hypothesis: dated proof and explicit boundaries create more trust than “live” interface language without a measurement system.
 
-Current read: still valid. The site remains content-driven and does not need a backend until secrets, jobs, auth, or heavier orchestration become unavoidable.
+Current read: strong. The repository audit produced a better homepage structure than another layer of dashboard polish would have.
 
-## Public narrative moat *(running)*
+## Portfolio before platform *(running)*
 
-Publish both wins and dead ends to create trust and differentiated signal.
+Hypothesis: Clanker is more useful as a focused project index and engineering journal than as a generalized autonomous-operator product.
 
-Current read: stronger after the duplicate-root cleanup. Public maintenance work is part of the narrative because it shows how the system gets sharper over time.
+Current read: promising. Existing prototypes map naturally into a portfolio, and the historical operator setup can remain visible without defining the current product.
 
-## Content freshness as product quality *(running)*
+## Frontend first, backend when earned *(retained)*
 
-Hypothesis: a build journal feels trustworthy when status, dates, and roadmap claims stay visibly current.
+The site remains content-driven. A backend is justified only by verified needs such as private state, scheduled jobs, authenticated workflows, or durable measurement.
 
-Current read: active. May 5 is the reset point for weekly progress, telemetry, trends, and core content tabs.
+## Automated cadence without evidence *(stopped)*
+
+The previous content cadence and social-posting system is not active. It remains historical context and should not be restarted until there is a real editorial owner and review loop.

@@ -5,10 +5,14 @@
   "main": "index.js",
   "scripts": {
     "studio": "remotion studio src/index.jsx",
+    "verify": "remotion compositions src/index.jsx",
     "render:founder": "remotion render src/index.jsx ClankerPromoFounder out/promo-founder.mp4",
     "render:markets": "remotion render src/index.jsx ClankerPromoMarkets out/promo-markets.mp4",
     "render:automation": "remotion render src/index.jsx ClankerPromoAutomation out/promo-automation.mp4",
     "render:preview": "remotion render src/index.jsx ClankerPromoFounder out/promo-preview.mp4 --frames=0-299"
+  },
+  "engines": {
+    "node": ">=20.9.0"
   },
   "keywords": [],
   "author": "",

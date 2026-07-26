@@ -6,8 +6,22 @@ export type WeeklyUpdate = {
 
 export const weeklyUpdates: WeeklyUpdate[] = [
   {
+    id: "2026-07-20_to_2026-07-26",
+    label: "Jul 20–26, 2026 (Current)",
+    items: [
+      "Audited the repository, git history, dependency graph, project boundaries, and all three live endpoints",
+      "Upgraded the three Next.js apps and cleared all known production dependency advisories",
+      "Added clean-install, audit, lint, type-check, build, Python, and Remotion verification paths",
+      "Archived the OpenClaw agent handbook and replaced it with project-specific maintenance instructions",
+      "Reframed Clanker as a proof-driven AI engineering lab with dated evidence instead of false-live claims",
+      "Compacted the checked-in research cache from 3 MB of raw abstracts to a 14 KB aggregate fixture",
+      "Added focused tests for content metadata, project records, and RSS normalization",
+      "Kept production unchanged while the revival branch remains under review",
+    ],
+  },
+  {
     id: "2026-05-04_to_2026-05-10",
-    label: "May 4–10, 2026 (Current)",
+    label: "May 4–10, 2026",
     items: [
       "🧹 Consolidated the site back to one root app and removed the duplicate nested copy",
       "🕒 Started a May 5 content freshness pass across core public pages",

@@ -48,3 +48,7 @@ pip install -r requirements.txt
 - [ ] Create Bronze/Silver/Gold models in dbt
 - [ ] Add quality checks + orchestration flow
 - [ ] Publish dashboard + demo runbook
+
+## Historical web snapshot
+
+`scripts/refresh_signals_cache.py` creates the bounded aggregate fixture consumed by `../data-pipeline-lab-site`. The checked-in fixture deliberately excludes raw paper abstracts and should be refreshed intentionally before its metrics are cited as current.

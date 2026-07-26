@@ -1,23 +1,19 @@
 #!/usr/bin/env python3
-"""Refresh arXiv signal cache for data-pipeline-lab-site.
+"""Build a bounded arXiv signal snapshot for data-pipeline-lab-site.
 
-Pragmatic v1:
-- Fetch newest batch from arXiv API
-- Merge incrementally with local cache by paper_id
-- Keep rolling 30-day window in cache
-- Recompute 7d vs prior 7d metrics
+The checked-in artifact contains aggregate metrics and chart series, not raw
+paper abstracts. Use ``--compact-existing`` once to migrate an older raw cache.
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Dict, List
-
-import requests
 
 ROOT = Path(__file__).resolve().parents[2]
 CACHE_PATH = ROOT / "data-pipeline-lab-site" / "public" / "signals-cache.json"
@@ -36,6 +32,17 @@ KEYWORDS = [
     ("alignment", "safety_governance"),
     ("hallucination", "safety_governance"),
 ]
+
+FOCUS_KEYWORDS = ["attention", "agent", "rag", "multimodal", "transformer"]
+
+THEME_KEYWORDS = {
+    "foundation_models": ["transformer", "attention", "llm", "gpt", "bert"],
+    "retrieval_knowledge": ["rag", "retrieval", "embedding"],
+    "agentic_systems": ["agent", "multi-agent", "tool use"],
+    "multimodal": ["multimodal", "vision-language", "vlm"],
+    "efficiency_infra": ["lora", "quantization", "distillation"],
+    "safety_governance": ["alignment", "hallucination", "robustness"],
+}
 
 
 @dataclass
@@ -66,6 +73,8 @@ def parse_entries(xml: str) -> List[Paper]:
 
 
 def fetch_recent(max_results: int = 2000) -> List[Paper]:
+    import requests
+
     query = "cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL+OR+cat:stat.ML"
     url = (
         f"https://export.arxiv.org/api/query?search_query={query}"
@@ -110,7 +119,7 @@ def compute_items(papers: List[Paper]) -> dict:
 
     items.sort(key=lambda r: r["score"], reverse=True)
     return {
-        "mode": "cached-arxiv-incremental",
+        "mode": "cached-arxiv-snapshot",
         "updatedAt": now.isoformat(),
         "windows": {
             "current": "last_7d",
@@ -122,44 +131,76 @@ def compute_items(papers: List[Paper]) -> dict:
     }
 
 
-def main() -> None:
-    now = datetime.now(timezone.utc)
-    cutoff = now - timedelta(days=30)
+def compute_history(papers: List[Paper], days: int = 30) -> dict:
+    if not papers:
+        return {"days": [], "keywords": [], "themes": []}
 
-    existing: Dict[str, Paper] = {}
-    if CACHE_PATH.exists():
-        cache = json.loads(CACHE_PATH.read_text())
-        for p in cache.get("papers", []):
-            try:
-                existing[p["paper_id"]] = Paper(
-                    paper_id=p["paper_id"],
-                    published=datetime.fromisoformat(p["published"]),
-                    text=p["text"],
-                )
-            except Exception:
-                continue
+    latest = max(p.published for p in papers)
+    dates = [(latest - timedelta(days=offset)).date().isoformat() for offset in range(days - 1, -1, -1)]
 
-    recent = fetch_recent(max_results=2000)
-    for p in recent:
-        existing[p.paper_id] = p
+    def series(key: str, label: str, keywords: List[str]) -> dict:
+        points = []
+        for date in dates:
+            value = sum(
+                1
+                for paper in papers
+                if paper.published.date().isoformat() == date
+                and any(keyword in paper.text for keyword in keywords)
+            )
+            points.append({"date": date, "value": value})
+        return {"key": key, "label": label, "points": points}
 
-    kept = [p for p in existing.values() if p.published >= cutoff]
-    kept.sort(key=lambda p: p.published)
-
-    computed = compute_items(kept)
-
-    payload = {
-        **computed,
-        "watermark": now.isoformat(),
-        "papers": [
-            {"paper_id": p.paper_id, "published": p.published.isoformat(), "text": p.text}
-            for p in kept
+    return {
+        "days": dates,
+        "keywords": [series(keyword, keyword, [keyword]) for keyword in FOCUS_KEYWORDS],
+        "themes": [
+            series(theme, theme.replace("_", " "), keywords)
+            for theme, keywords in THEME_KEYWORDS.items()
         ],
     }
 
+
+def write_snapshot(papers: List[Paper], *, preserve_metadata: dict | None = None) -> None:
+    computed = preserve_metadata or compute_items(papers)
+    payload = {
+        **computed,
+        "mode": "cached-arxiv-snapshot",
+        "history": compute_history(papers),
+        "note": "Historical research snapshot; refresh intentionally before using it as current evidence.",
+    }
     CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
-    CACHE_PATH.write_text(json.dumps(payload))
-    print(f"Updated cache: {CACHE_PATH} | papers_kept={len(kept)} | items={len(payload['items'])}")
+    CACHE_PATH.write_text(json.dumps(payload, separators=(",", ":")), encoding="utf-8")
+    print(f"Updated bounded snapshot: {CACHE_PATH} | source_papers={len(papers)} | items={len(payload['items'])}")
+
+
+def compact_existing() -> None:
+    cache = json.loads(CACHE_PATH.read_text(encoding="utf-8"))
+    papers = [
+        Paper(
+            paper_id=paper["paper_id"],
+            published=datetime.fromisoformat(paper["published"]),
+            text=paper["text"],
+        )
+        for paper in cache.get("papers", [])
+    ]
+    metadata = {key: cache[key] for key in ("updatedAt", "windows", "items") if key in cache}
+    write_snapshot(papers, preserve_metadata=metadata)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--compact-existing", action="store_true")
+    args = parser.parse_args()
+
+    if args.compact_existing:
+        compact_existing()
+        return
+
+    now = datetime.now(timezone.utc)
+    cutoff = now - timedelta(days=30)
+    recent = [paper for paper in fetch_recent(max_results=2000) if paper.published >= cutoff]
+    recent.sort(key=lambda paper: paper.published)
+    write_snapshot(recent)
 
 
 if __name__ == "__main__":

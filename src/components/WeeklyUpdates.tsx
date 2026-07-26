@@ -4,10 +4,7 @@ import { useMemo, useState } from "react";
 import { weeklyUpdates } from "@/lib/weeklyUpdates";
 
 export function WeeklyUpdates() {
-  const currentId = "2026-05-04_to_2026-05-10";
-  const [selectedId, setSelectedId] = useState(
-    weeklyUpdates.some((w) => w.id === currentId) ? currentId : (weeklyUpdates[0]?.id ?? ""),
-  );
+  const [selectedId, setSelectedId] = useState(weeklyUpdates[0]?.id ?? "");
 
   const selected = useMemo(
     () => weeklyUpdates.find((w) => w.id === selectedId) ?? weeklyUpdates[0],
@@ -19,7 +16,7 @@ export function WeeklyUpdates() {
   return (
     <div className="section-card">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="text-xs uppercase tracking-[0.12em] text-orange-200/70">🗂 Weekly Progress</p>
+        <p className="text-xs uppercase tracking-[0.12em] text-orange-200/70">Build history</p>
         <select
           className="rounded-lg border border-orange-300/30 bg-[#0b0f14]/60 px-3 py-2 text-sm text-orange-50"
           value={selectedId}

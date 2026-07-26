@@ -1,0 +1,76 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  next-apps:
+    name: ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: clanker-site
+            directory: .
+          - name: data-pipeline-lab-site
+            directory: data-pipeline-lab-site
+          - name: workflow-client-intake
+            directory: workflow-client-intake
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: ${{ matrix.directory }}/package-lock.json
+      - run: npm ci
+        working-directory: ${{ matrix.directory }}
+      - run: npm audit --omit=dev --audit-level=high
+        working-directory: ${{ matrix.directory }}
+      - if: matrix.directory == '.'
+        run: npm run test
+        working-directory: ${{ matrix.directory }}
+      - run: npm run lint
+        working-directory: ${{ matrix.directory }}
+      - run: npm run typecheck
+        working-directory: ${{ matrix.directory }}
+      - run: npm run build
+        working-directory: ${{ matrix.directory }}
+
+  video:
+    name: clanker-video
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: clanker-video
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: clanker-video/package-lock.json
+      - run: npm ci
+      - run: npm audit --omit=dev --audit-level=high
+      - run: npm run verify
+
+  python:
+    name: Python syntax
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python -m compileall -q data-pipeline-lab

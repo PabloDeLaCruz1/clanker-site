@@ -12,6 +12,12 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "data-pipeline-lab-site/**",
+    "workflow-client-intake/**",
+    "clanker-video/**",
+    "data-pipeline-lab/**",
+    "scripts/**",
+    "tools/**",
   ]),
 ]);
 

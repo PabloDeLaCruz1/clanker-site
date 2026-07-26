@@ -1,6 +1,6 @@
 ---
-title: "Use Cases"
-updated: "2026-05-05"
+title: "Approach"
+updated: "2026-07-25"
 ---
 
 Most people don’t buy "AI" — they buy better outcomes.
@@ -67,12 +67,12 @@ Convert activity into decision-grade outputs.
 
 **Before → After:** unclear progress and reporting overhead → clear narrative + accountability.
 
-## Clanker-first examples
+## Projects using this model
 
-- **Content operations:** keep Now, Build Log, Trends, and Workflow Lab current without losing the public narrative.
-- **Repo maintenance:** detect duplicate project roots, stale files, and deployment ambiguity before they become production confusion.
-- **Research workflows:** turn raw signal scans into structured memos, prototype ideas, and build priorities.
-- **Distribution support:** prepare channel-specific posts and route readers into the right site pages with measurable links.
+- **Clanker Site:** monitor repository health, dependency risk, content truthfulness, and deployment readiness.
+- **Workflow Client Intake:** capture an unstructured process and turn it into a scoped implementation brief.
+- **Research Signal Lab:** transform research metadata into reviewable topic and acceleration signals.
+- **Clanker Motion Kit:** convert a technical narrative into reusable short-form visual compositions.
 
 ## Industry overlays (applies across all 5)
 
@@ -81,12 +81,12 @@ Convert activity into decision-grade outputs.
 - Operations and back-office teams
 - Founder/operator workflows
 
-The point: same operating model, different domain context.
+The point: the same operating model can support different domains, but the evidence and approval boundaries must be designed for each one.
 
 ---
 
 ## Let’s talk
 
-If this resonates with your business, DM me on LinkedIn.
+If this resembles a workflow you are trying to improve, [connect with Pablo on LinkedIn](https://www.linkedin.com/in/pdelac01/).
 
 I’ll help you map your workflow to **Capture / Decide / Execute / Monitor / Report** and identify the best first automation step.

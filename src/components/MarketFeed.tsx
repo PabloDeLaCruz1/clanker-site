@@ -11,14 +11,23 @@ type FeedItem = {
 
 export function MarketFeed() {
   const [items, setItems] = useState<FeedItem[]>([]);
+  const [failed, setFailed] = useState(false);
 
   useEffect(() => {
     let mounted = true;
 
     const load = async () => {
-      const res = await fetch("/api/market-feed", { cache: "no-store" });
-      const data = await res.json();
-      if (mounted) setItems(data.items ?? []);
+      try {
+        const res = await fetch("/api/market-feed");
+        if (!res.ok) throw new Error(`Feed request failed with ${res.status}`);
+        const data = await res.json();
+        if (mounted) {
+          setItems(data.items ?? []);
+          setFailed(false);
+        }
+      } catch {
+        if (mounted) setFailed(true);
+      }
     };
 
     load();
@@ -33,7 +42,9 @@ export function MarketFeed() {
     <div className="section-card">
       <p className="text-xs uppercase tracking-[0.12em] text-orange-200/70">📰 Market News Feed · refresh ~5m</p>
       <div className="mt-3 space-y-2 text-sm text-orange-50/90">
-        {items.length === 0 ? (
+        {failed ? (
+          <p className="text-orange-100/60">Headlines are temporarily unavailable.</p>
+        ) : items.length === 0 ? (
           <p className="text-orange-100/60">Loading headlines...</p>
         ) : (
           items.slice(0, 6).map((item) => (
