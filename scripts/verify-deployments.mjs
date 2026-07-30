@@ -81,9 +81,14 @@ async function verifyResearchApi() {
 }
 
 const rootChecks = [
-  () => verifyPage("Clanker homepage", `${urls.root}/`, ["Revival shipped"]),
-  () => verifyPage("Clanker projects", `${urls.root}/projects`, ["Historical prototype"]),
-  () => verifyPage("Clanker build log", `${urls.root}/build-log`, ["e895315"]),
+  () =>
+    verifyPage("Clanker homepage", `${urls.root}/`, [
+      "FFXI Agent Lab",
+      "UCk7Zu8JfJLEhn4_2EYT7tMg",
+      "This player follows the channel",
+    ]),
+  () => verifyPage("Clanker projects", `${urls.root}/projects`, ["FFXI Agent Lab", "Active"]),
+  () => verifyPage("Clanker build log", `${urls.root}/build-log`, ["channel-ID livestream"]),
 ];
 
 const prototypeChecks = [

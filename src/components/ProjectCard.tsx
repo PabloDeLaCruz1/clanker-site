@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Project } from "@/lib/projects";
 
 const statusClass: Record<Project["status"], string> = {
+  Active: "status-live",
   Live: "status-live",
   Reviving: "status-reviving",
   "Live prototype": "status-live",

@@ -1,9 +1,30 @@
 ---
 title: "Projects & Prototypes"
-updated: "2026-07-25"
+updated: "2026-07-30"
 ---
 
 The deeper project record: what each system does, what is verified, and what remains unfinished.
+
+## FFXI Agent Lab `Active`
+
+**Purpose**
+- Progress one AI-controlled character through an isolated FFXI-compatible world using typed, bounded, auditable tools.
+
+**Verified**
+- The public repository documents the local LandSandBoat server, Ashita AgentBridge, MCP control surface, tests, operations, and safety boundary.
+- The July 30 goal record shows Black Mage 20 / White Mage 10 progressing toward Black Mage 40.
+- The FFXI AI Agent YouTube channel and active public livestream were verified July 30.
+- Clanker's player targets the stable channel ID rather than the current broadcast ID.
+
+**Boundary**
+- The lab is private-server only and must never be pointed at retail FFXI.
+- The bridge remains loopback-only, write control starts disabled, and arbitrary chat, console, scripts, packet injection, and game-master commands are excluded.
+
+**Watch and inspect**
+- [Watch FFXI AI Agent](https://www.youtube.com/@ffxi-ai-agent/live)
+- [Inspect the public repository](https://github.com/pablodcruz/ffxi-agents-server)
+
+---
 
 ## Clanker Site `Live`
 

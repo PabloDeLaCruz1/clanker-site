@@ -30,7 +30,7 @@ The 2026-07-25 audit established:
 
 Keep the Clanker name and the proof-driven build-journal idea, but reposition the site as Pablo's AI engineering lab: shipped prototypes, architecture decisions, measurable results, and honest build notes.
 
-OpenClaw should become historical implementation context, not a current capability claim. This direction is a working recommendation until Pablo confirms the final positioning.
+OpenClaw is historical implementation context, not a current capability claim. As of July 30, FFXI Agent Lab is the lead project inside the broader proof-driven AI engineering lab.
 
 ## Success criteria
 
@@ -114,3 +114,4 @@ Exit: the refreshed site is live, monitored, and documented.
 - 2026-07-26: Authenticate the owning Vercel account, link both existing prototype projects, deploy the reviewed source, and verify all production freshness checks.
 - 2026-07-26: Authenticate the repository owner and protect `main` with an approval gate, all five CI checks, strict branch freshness, resolved conversations, and destructive-update protection.
 - 2026-07-26: Replace the preserved March research fixture with a 6,754-paper bounded refresh; anchor comparisons to complete source days and add explicit refresh/source freshness limits.
+- 2026-07-30: Make FFXI Agent Lab the lead public project and select a stable YouTube channel-ID embed so future public broadcasts appear without per-stream code changes.

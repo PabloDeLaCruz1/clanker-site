@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FfxiLiveStream } from "@/components/FfxiLiveStream";
 import { Nav } from "@/components/Nav";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -23,11 +24,11 @@ export default async function Home() {
         />
 
         <div className="action-row mt-7">
-          <Link className="action-primary" href="/projects">
-            Explore the projects
-          </Link>
-          <Link className="action-secondary" href="/build-log">
-            Read the build log
+          <a className="action-primary" href="#live-stream">
+            Watch the live project
+          </a>
+          <Link className="action-secondary" href="/projects">
+            Explore all projects
           </Link>
         </div>
 
@@ -36,9 +37,9 @@ export default async function Home() {
         <section aria-labelledby="proof-heading">
           <div className="section-intro">
             <div>
-              <p className="kicker text-xs">Evidence, July 26</p>
+              <p className="kicker text-xs">Evidence, July 30</p>
               <h2 className="mt-2 text-2xl font-semibold tracking-tight text-orange-50" id="proof-heading">
-                The revival baseline
+                The operating baseline
               </h2>
             </div>
             <p className="max-w-md text-sm leading-6 text-orange-100/60">
@@ -59,11 +60,13 @@ export default async function Home() {
               <p className="mt-2 text-sm text-orange-100/65">Public app endpoints verified reachable</p>
             </article>
             <article className="proof-card">
-              <p className="text-3xl font-semibold text-orange-50">3</p>
-              <p className="mt-2 text-sm text-orange-100/65">Remotion compositions verified from a clean install</p>
+              <p className="text-3xl font-semibold text-orange-50">1</p>
+              <p className="mt-2 text-sm text-orange-100/65">Lead AI-agent project streaming its work live</p>
             </article>
           </div>
         </section>
+
+        <FfxiLiveStream />
 
         <section className="mt-12" aria-labelledby="featured-heading">
           <div className="section-intro">
@@ -96,19 +99,19 @@ export default async function Home() {
           </div>
 
           <div className="section-card">
-            <p className="kicker text-xs">Build media</p>
-            <h2 className="mt-2 text-xl font-semibold text-orange-50">The video archive is part of the record.</h2>
+            <p className="kicker text-xs">Project source</p>
+            <h2 className="mt-2 text-xl font-semibold text-orange-50">The control boundary is inspectable.</h2>
             <p className="mt-3 text-sm leading-6 text-orange-50/70">
-              Prior walkthroughs remain available on YouTube. New media will resume after the product foundation
-              and public narrative are stable.
+              The public repository documents the LandSandBoat server, guarded AgentBridge actions, MCP tools,
+              safety constraints, tests, and current gameplay goal.
             </p>
             <a
-              href="https://www.youtube.com/@clanker-site"
+              href="https://github.com/pablodcruz/ffxi-agents-server"
               target="_blank"
               rel="noopener noreferrer"
               className="action-secondary mt-5"
             >
-              Browse the archive ↗
+              Inspect FFXI Agent Lab ↗
             </a>
           </div>
         </section>

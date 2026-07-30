@@ -6,7 +6,7 @@ import { projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Verified AI, data, workflow, and media prototypes built by Pablo De La Cruz.",
+  description: "FFXI Agent Lab and other verified AI, data, workflow, and media projects by Pablo De La Cruz.",
 };
 
 export default function ProjectsPage() {

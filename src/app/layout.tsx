@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | clanker.site",
   },
   description:
-    "Pablo De La Cruz builds practical AI systems, data products, and developer tools—with the evidence and tradeoffs left visible.",
+    "Watch FFXI Agent Lab live and inspect the bounded AI control system, evidence, constraints, and engineering tradeoffs behind it.",
   keywords: [
     "build in public",
     "AI engineering",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Clanker — AI engineering lab",
     description:
-      "Practical AI systems, data products, and developer tools—built with the evidence and tradeoffs visible.",
+      "FFXI Agent Lab is a bounded AI control system progressing through an isolated game world, streamed live with the engineering work visible.",
     url: siteUrl,
     siteName: "clanker.site",
     type: "website",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Clanker — AI engineering lab",
     description:
-      "Practical AI systems, data products, and developer tools by Pablo De La Cruz.",
+      "Watch FFXI Agent Lab live and inspect the bounded AI control system behind it.",
   },
   robots: {
     index: true,
