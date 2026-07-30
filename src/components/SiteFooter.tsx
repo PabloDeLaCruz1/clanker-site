@@ -15,8 +15,8 @@ export function SiteFooter() {
         <a href="https://www.linkedin.com/in/pdelac01/" rel="noopener noreferrer" target="_blank">
           LinkedIn
         </a>
-        <a href="https://www.youtube.com/@clanker-site" rel="noopener noreferrer" target="_blank">
-          YouTube
+        <a href="https://www.youtube.com/@ffxi-ai-agent/streams" rel="noopener noreferrer" target="_blank">
+          FFXI YouTube
         </a>
       </div>
     </footer>

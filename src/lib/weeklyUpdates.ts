@@ -6,8 +6,17 @@ export type WeeklyUpdate = {
 
 export const weeklyUpdates: WeeklyUpdate[] = [
   {
+    id: "2026-07-27_to_2026-08-02",
+    label: "Jul 27–Aug 2, 2026 (Current)",
+    items: [
+      "Made FFXI Agent Lab the lead Clanker project using source-backed July 30 status",
+      "Added a responsive YouTube player that follows the stable channel ID instead of one broadcast ID",
+      "Linked the public control-plane repository and documented the private-server-only safety boundary",
+    ],
+  },
+  {
     id: "2026-07-20_to_2026-07-26",
-    label: "Jul 20–26, 2026 (Current)",
+    label: "Jul 20–26, 2026",
     items: [
       "Audited the repository, git history, dependency graph, project boundaries, and all three live endpoints",
       "Upgraded the three Next.js apps and cleared all known production dependency advisories",

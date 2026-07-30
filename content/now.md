@@ -1,10 +1,10 @@
 ---
-title: "AI systems that earn their place."
+title: "An AI agent learning its way through Vana'diel."
 subtitle: "Clanker · Pablo De La Cruz · AI engineering lab"
-description: "Practical AI systems, data products, and developer tools—built with the evidence, constraints, and tradeoffs left visible."
-focus: "Operating the revived workspace and turning verified prototypes into durable case studies."
-status: "Revival shipped"
-updated: "July 26, 2026"
+description: "FFXI Agent Lab is the new main project: a bounded, auditable agent progressing through an isolated game world while the work streams live."
+focus: "Advancing the FFXI AI Agent toward Black Mage 40 with deterministic supervisors, guarded MCP tools, and visible telemetry."
+status: "FFXI Agent Lab live"
+updated: "July 30, 2026"
 ---
 
 ## Why this exists
@@ -13,10 +13,11 @@ AI claims are easy to publish. Working systems, clear boundaries, and repeatable
 
 ## Work in progress
 
-- **Foundation:** dependency security, clean installs, focused tests, and repository-wide CI are live.
-- **Product:** the evidence-backed project experience is running in production.
-- **Operations:** protected `main` passes all five CI jobs; both independently hosted prototypes pass production checks; the research snapshot was refreshed July 26 from 6,754 papers with source coverage through July 23.
-- **Next:** turn the verified prototypes into durable case studies and decide their long-term repository boundaries.
+- **Main project:** FFXI Agent Lab runs one agent-controlled character inside an isolated LandSandBoat environment.
+- **Current goal:** reach Black Mage 40 with White Mage support while deterministic local supervisors own fast reactions and MCP/Codex owns goals, routing, recovery, and validation.
+- **Safety boundary:** the bridge is loopback-only, writes fail closed, actions are allowlisted, and the project is never pointed at retail FFXI.
+- **Live record:** the homepage player follows the FFXI AI Agent channel automatically, so a new public livestream does not require a site release.
+- **Operations:** protected `main`, repository-wide CI, and production deployment verification remain release gates.
 
 ## How work is presented
 
