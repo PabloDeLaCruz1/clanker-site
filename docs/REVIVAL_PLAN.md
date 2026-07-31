@@ -117,3 +117,4 @@ Exit: the refreshed site is live, monitored, and documented.
 - 2026-07-30: Make FFXI Agent Lab the lead public project and select a stable YouTube channel-ID embed so future public broadcasts appear without per-stream code changes.
 - 2026-07-31: Replace the channel embed after it failed to follow a restarted broadcast; resolve the active video at runtime, refresh once per minute, and fail to an explicit channel fallback.
 - 2026-07-31: Add a channel-feed/direct-watch fallback after Vercel's region omitted live markers present in the local YouTube response.
+- 2026-07-31: Always render the channel uploads playlist as the player fallback; keep exact live-video resolution as a progressive enhancement rather than a prerequisite for playback.

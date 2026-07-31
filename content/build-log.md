@@ -7,6 +7,7 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
+- `uploads playlist fallback` — Always render YouTube's documented uploads-playlist player so the newest channel stream remains watchable when regional live metadata cannot be resolved
 - `regional live fallback` — Resolve recent channel-feed entries individually when YouTube's regional `/live` response omits active-broadcast markers
 - `runtime live resolver` — Replace YouTube's unreliable channel embed with a cached current-broadcast resolver, one-minute client refresh, and an explicit offline/unavailable fallback
 - `channel-ID livestream` — Make FFXI Agent Lab the lead project and embed the active YouTube broadcast by stable channel ID so future streams require no code update
