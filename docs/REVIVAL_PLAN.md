@@ -116,3 +116,4 @@ Exit: the refreshed site is live, monitored, and documented.
 - 2026-07-26: Replace the preserved March research fixture with a 6,754-paper bounded refresh; anchor comparisons to complete source days and add explicit refresh/source freshness limits.
 - 2026-07-30: Make FFXI Agent Lab the lead public project and select a stable YouTube channel-ID embed so future public broadcasts appear without per-stream code changes.
 - 2026-07-31: Replace the channel embed after it failed to follow a restarted broadcast; resolve the active video at runtime, refresh once per minute, and fail to an explicit channel fallback.
+- 2026-07-31: Add a channel-feed/direct-watch fallback after Vercel's region omitted live markers present in the local YouTube response.

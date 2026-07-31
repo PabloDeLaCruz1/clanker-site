@@ -101,6 +101,10 @@ async function verifyYouTubeLiveApi() {
     if (!body.embedUrl?.includes(`/embed/${body.videoId}`) || body.embedUrl.includes("live_stream")) {
       throw new Error("live embed URL does not target the resolved broadcast");
     }
+
+    if (!["channel-live-page", "channel-feed"].includes(body.resolutionSource)) {
+      throw new Error(`unexpected resolution source: ${body.resolutionSource ?? "missing"}`);
+    }
   }
 
   return `FFXI YouTube live resolver: ${url}`;
