@@ -37,6 +37,7 @@ export async function GET() {
         checkedAt,
         embedUrl: `https://www.youtube.com/embed/${broadcast.videoId}?autoplay=1&mute=1&rel=0`,
         live: true,
+        resolutionSource: broadcast.resolutionSource,
         status: "live",
         title: broadcast.title,
         videoId: broadcast.videoId,

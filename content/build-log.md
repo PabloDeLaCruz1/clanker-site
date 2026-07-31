@@ -7,6 +7,7 @@ GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
+- `regional live fallback` — Resolve recent channel-feed entries individually when YouTube's regional `/live` response omits active-broadcast markers
 - `runtime live resolver` — Replace YouTube's unreliable channel embed with a cached current-broadcast resolver, one-minute client refresh, and an explicit offline/unavailable fallback
 - `channel-ID livestream` — Make FFXI Agent Lab the lead project and embed the active YouTube broadcast by stable channel ID so future streams require no code update
 - `snapshot` — Refresh Research Signal Lab from 6,754 bounded arXiv records, anchor comparisons to complete source days, and enforce refresh/source-age checks
