@@ -1,6 +1,6 @@
 ---
 title: "Projects & Prototypes"
-updated: "2026-07-30"
+updated: "2026-07-31"
 ---
 
 The deeper project record: what each system does, what is verified, and what remains unfinished.
@@ -14,7 +14,7 @@ The deeper project record: what each system does, what is verified, and what rem
 - The public repository documents the local LandSandBoat server, Ashita AgentBridge, MCP control surface, tests, operations, and safety boundary.
 - The July 30 goal record shows Black Mage 20 / White Mage 10 progressing toward Black Mage 40.
 - The FFXI AI Agent YouTube channel and active public livestream were verified July 30.
-- Clanker's player targets the stable channel ID rather than the current broadcast ID.
+- Clanker's runtime resolver checks the stable channel route and embeds the current broadcast ID only while it is live.
 
 **Boundary**
 - The lab is private-server only and must never be pointed at retail FFXI.
