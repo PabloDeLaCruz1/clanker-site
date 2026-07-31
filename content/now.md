@@ -16,7 +16,7 @@ AI claims are easy to publish. Working systems, clear boundaries, and repeatable
 - **Main project:** FFXI Agent Lab runs one agent-controlled character inside an isolated LandSandBoat environment.
 - **Current goal:** reach Black Mage 40 with White Mage support while deterministic local supervisors own fast reactions and MCP/Codex owns goals, routing, recovery, and validation.
 - **Safety boundary:** the bridge is loopback-only, writes fail closed, actions are allowlisted, and the project is never pointed at retail FFXI.
-- **Live record:** the homepage resolves the channel's active broadcast at runtime and checks again every minute, so a restarted public livestream does not require a site release.
+- **Live record:** the homepage loads the channel's newest stream through its uploads playlist, then checks for an exact active broadcast every minute, so a restarted public livestream does not require a site release.
 - **Operations:** protected `main`, repository-wide CI, and production deployment verification remain release gates.
 
 ## How work is presented

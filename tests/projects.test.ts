@@ -3,6 +3,8 @@ import test from "node:test";
 import {
   FFXI_YOUTUBE_CHANNEL_ID,
   FFXI_YOUTUBE_LIVE_URL,
+  FFXI_YOUTUBE_UPLOADS_EMBED_URL,
+  FFXI_YOUTUBE_UPLOADS_PLAYLIST_ID,
 } from "../src/lib/youtubeLive";
 import { projects } from "../src/lib/projects";
 
@@ -29,4 +31,6 @@ test("FFXI Agent Lab is the lead project and its resolver follows the channel", 
 
   assert.equal(FFXI_YOUTUBE_CHANNEL_ID, "UCk7Zu8JfJLEhn4_2EYT7tMg");
   assert.equal(FFXI_YOUTUBE_LIVE_URL, "https://www.youtube.com/@ffxi-ai-agent/live");
+  assert.equal(FFXI_YOUTUBE_UPLOADS_PLAYLIST_ID, "UUk7Zu8JfJLEhn4_2EYT7tMg");
+  assert.match(FFXI_YOUTUBE_UPLOADS_EMBED_URL, /embed\/videoseries\?list=UUk7Zu8JfJLEhn4_2EYT7tMg/);
 });

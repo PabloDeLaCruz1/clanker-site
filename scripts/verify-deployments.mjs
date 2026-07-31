@@ -114,8 +114,8 @@ const rootChecks = [
   () =>
     verifyPage("Clanker homepage", `${urls.root}/`, [
       "FFXI Agent Lab",
-      "The site checks the channel every minute",
-      "active public broadcast",
+      "UUk7Zu8JfJLEhn4_2EYT7tMg",
+      "loads the channel’s newest stream immediately",
     ]),
   verifyYouTubeLiveApi,
   () => verifyPage("Clanker projects", `${urls.root}/projects`, ["FFXI Agent Lab", "Active"]),

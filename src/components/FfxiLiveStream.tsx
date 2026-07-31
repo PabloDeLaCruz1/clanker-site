@@ -1,7 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FFXI_YOUTUBE_CHANNEL_ID, FFXI_YOUTUBE_LIVE_URL } from "@/lib/youtubeLive";
+import {
+  FFXI_YOUTUBE_CHANNEL_ID,
+  FFXI_YOUTUBE_LIVE_URL,
+  FFXI_YOUTUBE_UPLOADS_EMBED_URL,
+} from "@/lib/youtubeLive";
 
 type LiveState = {
   channelId: string;
@@ -58,6 +62,12 @@ export function FfxiLiveStream() {
   }, []);
 
   const playerAvailable = stream?.live && stream.embedUrl && stream.videoId;
+  const playerUrl = playerAvailable ? stream.embedUrl : FFXI_YOUTUBE_UPLOADS_EMBED_URL;
+  const playerTitle = playerAvailable
+    ? stream.title
+      ? `${stream.title} — live on YouTube`
+      : "FFXI AI Agent live stream"
+    : "Latest FFXI AI Agent stream from YouTube";
 
   return (
     <section className="live-stream-card mt-12" id="live-stream" aria-labelledby="live-stream-heading">
@@ -77,37 +87,26 @@ export function FfxiLiveStream() {
       </div>
 
       <div className="live-stream-frame mt-5" aria-live="polite">
-        {playerAvailable ? (
-          <iframe
-            key={stream.videoId}
-            src={stream.embedUrl}
-            title={stream.title ? `${stream.title} — live on YouTube` : "FFXI AI Agent live stream"}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            loading="eager"
-            referrerPolicy="strict-origin-when-cross-origin"
-          />
-        ) : (
-          <div className="live-stream-fallback">
-            <p className="status-pill status-live">{stream ? "Channel status" : "Checking channel"}</p>
-            <p className="mt-4 text-xl font-semibold text-orange-50">
-              {stream?.status === "offline"
-                ? "The channel is offline right now."
-                : stream?.status === "unavailable"
-                  ? "The live player could not be resolved."
-                  : "Finding the current broadcast…"}
-            </p>
-            <p className="mt-2 max-w-lg text-sm leading-6 text-orange-100/60">
-              Open the channel directly for scheduled streams, replays, and the latest live status.
-            </p>
-          </div>
-        )}
+        <iframe
+          key={playerAvailable ? stream.videoId : "channel-uploads"}
+          src={playerUrl}
+          title={playerTitle}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          loading="eager"
+          referrerPolicy="strict-origin-when-cross-origin"
+        />
       </div>
+      <p className="mt-3 text-xs leading-5 text-orange-100/55" aria-live="polite">
+        {playerAvailable
+          ? "Live broadcast resolved directly."
+          : "Showing the channel’s newest stream while live-status resolution runs in the background."}
+      </p>
 
       <div className="mt-5 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <p className="max-w-2xl text-sm leading-6 text-orange-50/68">
-          The site checks the channel every minute and embeds the active public broadcast by its current video
-          ID. Restarting tomorrow’s stream requires no site release.
+          The player loads the channel’s newest stream immediately, then checks every minute for an exact active
+          broadcast. Restarting tomorrow’s stream requires no site release.
         </p>
         <div className="action-row shrink-0">
           <a

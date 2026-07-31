@@ -12,6 +12,7 @@ export const weeklyUpdates: WeeklyUpdate[] = [
       "Made FFXI Agent Lab the lead Clanker project using source-backed July 30 status",
       "Added a responsive YouTube player that follows the stable channel ID instead of one broadcast ID",
       "Replaced YouTube's unreliable channel embed with a runtime current-broadcast resolver and offline fallback",
+      "Added the documented uploads-playlist player as the always-available regional fallback",
       "Linked the public control-plane repository and documented the private-server-only safety boundary",
     ],
   },

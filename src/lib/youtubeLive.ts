@@ -3,6 +3,10 @@ export const FFXI_YOUTUBE_HANDLE = "ffxi-ai-agent";
 export const FFXI_YOUTUBE_LIVE_URL = `https://www.youtube.com/@${FFXI_YOUTUBE_HANDLE}/live`;
 export const FFXI_YOUTUBE_FEED_URL =
   `https://www.youtube.com/feeds/videos.xml?channel_id=${FFXI_YOUTUBE_CHANNEL_ID}`;
+export const FFXI_YOUTUBE_UPLOADS_PLAYLIST_ID = FFXI_YOUTUBE_CHANNEL_ID.replace(/^UC/, "UU");
+export const FFXI_YOUTUBE_UPLOADS_EMBED_URL =
+  `https://www.youtube.com/embed/videoseries?list=${FFXI_YOUTUBE_UPLOADS_PLAYLIST_ID}` +
+  "&autoplay=1&mute=1&rel=0";
 
 export type YouTubeLiveBroadcast = {
   resolutionSource: "channel-feed" | "channel-live-page";
