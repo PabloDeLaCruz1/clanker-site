@@ -19,7 +19,7 @@ export const projects: Project[] = [
     title: "FFXI Agent Lab",
     description:
       "A local-first AI control lab where Codex progresses one character through an isolated FFXI-compatible world behind bounded, auditable tools.",
-    evidence: "Public source, active Black Mage 40 goal, and YouTube livestream verified July 30, 2026",
+    evidence: "Public source, active Black Mage 40 goal, and runtime YouTube livestream verified July 31, 2026",
     stack: ["MCP", "TypeScript", "LandSandBoat", "Ashita"],
     status: "Active",
     href: "https://github.com/pablodcruz/ffxi-agents-server",

@@ -1,12 +1,13 @@
 ---
 title: "Build Log"
-updated: "2026-07-30"
+updated: "2026-07-31"
 ---
 
 GitHub-style ship log for `clanker-site`.
 
 ## Commit timeline
 
+- `runtime live resolver` — Replace YouTube's unreliable channel embed with a cached current-broadcast resolver, one-minute client refresh, and an explicit offline/unavailable fallback
 - `channel-ID livestream` — Make FFXI Agent Lab the lead project and embed the active YouTube broadcast by stable channel ID so future streams require no code update
 - `snapshot` — Refresh Research Signal Lab from 6,754 bounded arXiv records, anchor comparisons to complete source days, and enforce refresh/source-age checks
 - `GitHub` — Protect `main` with required pull requests, one independent approval, five up-to-date CI jobs, resolved conversations, and no force-pushes or deletion

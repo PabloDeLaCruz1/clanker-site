@@ -1,12 +1,12 @@
 ---
 title: "Roadmap"
-updated: "2026-07-30"
+updated: "2026-07-31"
 ---
 
 ## Now — FFXI Agent Lab
 
 - Make the isolated FFXI agent-control lab Clanker's lead project
-- Follow the active public broadcast through a stable YouTube channel ID instead of a per-stream video ID
+- Resolve the active public broadcast from the stable YouTube channel route and refresh it once per minute
 - Progress toward Black Mage 40 / White Mage while keeping fast reactions deterministic and MCP actions bounded
 - Keep the retail-game boundary, loopback-only bridge, fail-closed writes, and human-controlled publishing explicit
 

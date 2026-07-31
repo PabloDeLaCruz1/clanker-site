@@ -80,15 +80,42 @@ async function verifyResearchApi() {
   return `Research Signal API: ${url}`;
 }
 
+async function verifyYouTubeLiveApi() {
+  const url = `${urls.root}/api/youtube-live`;
+  const response = await request(url);
+  const body = await response.json();
+
+  if (body.channelId !== "UCk7Zu8JfJLEhn4_2EYT7tMg") {
+    throw new Error(`unexpected YouTube channel: ${body.channelId ?? "missing"}`);
+  }
+
+  if (!["live", "offline", "unavailable"].includes(body.status)) {
+    throw new Error(`unexpected live status: ${body.status ?? "missing"}`);
+  }
+
+  if (body.live) {
+    if (!/^[A-Za-z0-9_-]{11}$/.test(body.videoId ?? "")) {
+      throw new Error(`invalid live video ID: ${body.videoId ?? "missing"}`);
+    }
+
+    if (!body.embedUrl?.includes(`/embed/${body.videoId}`) || body.embedUrl.includes("live_stream")) {
+      throw new Error("live embed URL does not target the resolved broadcast");
+    }
+  }
+
+  return `FFXI YouTube live resolver: ${url}`;
+}
+
 const rootChecks = [
   () =>
     verifyPage("Clanker homepage", `${urls.root}/`, [
       "FFXI Agent Lab",
-      "UCk7Zu8JfJLEhn4_2EYT7tMg",
-      "This player follows the channel",
+      "The site checks the channel every minute",
+      "active public broadcast",
     ]),
+  verifyYouTubeLiveApi,
   () => verifyPage("Clanker projects", `${urls.root}/projects`, ["FFXI Agent Lab", "Active"]),
-  () => verifyPage("Clanker build log", `${urls.root}/build-log`, ["channel-ID livestream"]),
+  () => verifyPage("Clanker build log", `${urls.root}/build-log`, ["runtime live resolver"]),
 ];
 
 const prototypeChecks = [
